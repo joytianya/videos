@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能视频播放器</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 2rem;
+            font-weight: 300;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .input-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        .url-input {
+            width: 70%;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+        
+        .extract-btn {
+            padding: 15px 30px;
+            font-size: 16px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .extract-btn:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .extract-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        #video-container {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+        
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .video-info {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+        
+        .video-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #fff;
+            line-height: 1.4;
+        }
+        
+        .video-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .meta-item .icon {
+            font-size: 1rem;
+        }
+        
+        .video-description {
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .video-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+        
+        .status {
+            margin: 1rem 0;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        
+        .status.loading {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+        }
+        
+        .status.success {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4caf50;
+        }
+        
+        .status.error {
+            background: rgba(244, 67, 54, 0.2);
+            color: #f44336;
+        }
+        
+        .manual-input {
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .manual-input textarea {
+            width: 90%;
+            height: 100px;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎬 智能视频播放器</h1>
+
+        <div class="input-section">
+            <input type="url" class="url-input" id="pageUrl" placeholder="输入视频页面地址，如：https://www.yfsp.tv/play/6T3bzwMGODG" value="https://www.yfsp.tv/play/6T3bzwMGODG">
+            <button class="extract-btn" id="extractBtn">🚀 自动提取播放</button>
+
+            <div id="status" class="status" style="display: none;"></div>
+
+            <div class="manual-input" id="manualInput">
+                <h3>手动输入 M3U8 地址：</h3>
+                <textarea id="m3u8Input" placeholder="如果自动提取失败，请在此粘贴 M3U8 地址"></textarea>
+                <br><br>
+                <button class="extract-btn" id="manualPlayBtn">▶️ 手动播放</button>
+            </div>
+        </div>
+
+        <div id="video-container">
+            <video id="video" controls autoplay muted playsinline></video>
+            <div class="video-info" id="videoInfo" style="display: none;">
+                <div class="video-title" id="videoTitle"></div>
+                <div class="video-meta" id="videoMeta"></div>
+                <div class="video-description" id="videoDescription"></div>
+                <div class="video-tags" id="videoTags"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 hls.js 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+    <script>
+        const pageUrlInput = document.getElementById('pageUrl');
+        const extractBtn = document.getElementById('extractBtn');
+        const statusDiv = document.getElementById('status');
+        const videoContainer = document.getElementById('video-container');
+        const video = document.getElementById('video');
+        const manualInput = document.getElementById('manualInput');
+        const m3u8Input = document.getElementById('m3u8Input');
+        const manualPlayBtn = document.getElementById('manualPlayBtn');
+        const videoInfo = document.getElementById('videoInfo');
+        const videoTitle = document.getElementById('videoTitle');
+        const videoMeta = document.getElementById('videoMeta');
+        const videoDescription = document.getElementById('videoDescription');
+        const videoTags = document.getElementById('videoTags');
+
+        function showStatus(message, type) {
+            statusDiv.textContent = message;
+            statusDiv.className = `status ${type}`;
+            statusDiv.style.display = 'block';
+        }
+
+        function hideStatus() {
+            statusDiv.style.display = 'none';
+        }
+
+        function displayVideoInfo(metaInfo) {
+            if (!metaInfo) return;
+
+            // 显示标题
+            if (metaInfo.title) {
+                videoTitle.textContent = metaInfo.title;
+            }
+
+            // 显示元数据
+            videoMeta.innerHTML = '';
+            const metaItems = [];
+
+            if (metaInfo.rating) {
+                metaItems.push(`<div class="meta-item"><span class="icon">⭐</span><span>评分: ${metaInfo.rating}</span></div>`);
+            }
+
+            if (metaInfo.duration) {
+                metaItems.push(`<div class="meta-item"><span class="icon">⏱️</span><span>时长: ${metaInfo.duration}</span></div>`);
+            }
+
+            if (metaInfo.views) {
+                metaItems.push(`<div class="meta-item"><span class="icon">👁️</span><span>${metaInfo.views}</span></div>`);
+            }
+
+            if (metaInfo.commentCount) {
+                metaItems.push(`<div class="meta-item"><span class="icon">💬</span><span>${metaInfo.commentCount} 评论</span></div>`);
+            }
+
+            if (metaInfo.publishDate) {
+                metaItems.push(`<div class="meta-item"><span class="icon">📅</span><span>${metaInfo.publishDate}</span></div>`);
+            }
+
+            videoMeta.innerHTML = metaItems.join('');
+
+            // 显示描述
+            if (metaInfo.description) {
+                videoDescription.textContent = metaInfo.description;
+                videoDescription.style.display = 'block';
+            } else {
+                videoDescription.style.display = 'none';
+            }
+
+            // 显示标签
+            videoTags.innerHTML = '';
+            if (metaInfo.tags && metaInfo.tags.length > 0) {
+                metaInfo.tags.forEach(tag => {
+                    if (tag.trim()) {
+                        const tagEl = document.createElement('span');
+                        tagEl.className = 'tag';
+                        tagEl.textContent = tag;
+                        videoTags.appendChild(tagEl);
+                    }
+                });
+            }
+
+            // 显示视频信息区域
+            videoInfo.style.display = 'block';
+        }
+
+        async function extractAndPlay(pageUrl) {
+            extractBtn.disabled = true;
+            extractBtn.textContent = '🔄 提取中...';
+            showStatus('正在自动提取视频地址和元信息，请稍候...', 'loading');
+
+            try {
+                // 调用后端提取接口
+                const response = await fetch('/extract-url', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        pageUrl
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success && result.m3u8Url) {
+                    showStatus(`✅ 成功提取到视频地址和元信息！`, 'success');
+
+                    // 显示视频元信息
+                    displayVideoInfo(result.metaInfo);
+
+                    playVideo(result.m3u8Url);
+                } else {
+                    showStatus(`❌ 自动提取失败：${result.error || '未知错误'}`, 'error');
+
+                    // 即使提取失败，也尝试显示元信息
+                    if (result.metaInfo) {
+                        displayVideoInfo(result.metaInfo);
+                    }
+
+                    manualInput.style.display = 'block';
+                }
+            } catch (error) {
+                showStatus(`❌ 提取失败：${error.message}`, 'error');
+                manualInput.style.display = 'block';
+            } finally {
+                extractBtn.disabled = false;
+                extractBtn.textContent = '🚀 自动提取播放';
+            }
+        }
+
+        function playVideo(m3u8Url) {
+            const proxyUrl = `http://localhost:3000/proxy?url=${encodeURIComponent(m3u8Url)}`;
+
+            videoContainer.style.display = 'block';
+
+            if (Hls.isSupported()) {
+                const hls = new Hls({
+                    debug: false,
+                    enableWorker: true,
+                    lowLatencyMode: false,
+                });
+
+                hls.loadSource(proxyUrl);
+                hls.attachMedia(video);
+
+                hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                    showStatus('🎉 视频加载成功，开始播放！', 'success');
+                    setTimeout(hideStatus, 3000);
+                });
+
+                hls.on(Hls.Events.ERROR, function(event, data) {
+                    if (data.fatal) {
+                        showStatus(`❌ 播放错误：${data.details}`, 'error');
+                    }
+                });
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = proxyUrl;
+                showStatus('🎉 视频加载成功，开始播放！', 'success');
+                setTimeout(hideStatus, 3000);
+            } else {
+                showStatus('❌ 浏览器不支持 HLS 播放', 'error');
+            }
+        }
+
+        // 事件监听
+        extractBtn.addEventListener('click', () => {
+            const pageUrl = pageUrlInput.value.trim();
+            if (!pageUrl) {
+                showStatus('请输入视频页面地址', 'error');
+                return;
+            }
+            extractAndPlay(pageUrl);
+        });
+
+        manualPlayBtn.addEventListener('click', () => {
+            const m3u8Url = m3u8Input.value.trim();
+            if (!m3u8Url) {
+                showStatus('请输入 M3U8 地址', 'error');
+                return;
+            }
+            playVideo(m3u8Url);
+        });
+
+        // 回车键快捷操作
+        pageUrlInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                extractBtn.click();
+            }
+        });
+    </script>
+</body>
+
+</html>

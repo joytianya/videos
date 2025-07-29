@@ -1,0 +1,18 @@
+{
+  "currentPage": 7,
+  "totalPages": 7,
+  "completedPages": 7,
+  "failedPages": 0,
+  "completedList": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "failedList": [],
+  "lastUpdate": "2025-07-29T15:57:32.143Z",
+  "status": "completed"
+}
