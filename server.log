@@ -1,0 +1,535 @@
+🚀 代理服务器运行在 http://localhost:3000
+🎬 实时搜索页面: http://localhost:3000/live-search.html
+🎬 播放器页面: http://localhost:3000/player?id=<playId>
+📚 从文件加载索引: 180 个视频, 2474 个关键词
+✅ 搜索索引加载成功
+🕐 启动播放会话清理定时器
+🕐 启动播放会话清理定时器
+✅ 服务器启动完成！
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_360.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=k&verify=1753881717-DOhm7gyiv4USecwhBKjJHCGyJ65PJCChaJ8%2BsnFA2zE%3D
+🎬 电影映射: 扫毒3(粤语) -> contxt:s22dEHEyL0V, episodeKey:M1Ez2R9vEQA, 使用:s22dEHEyL0V
+🎬 电影映射: 扫毒3 -> contxt:IRtzQnHYyek, episodeKey:zNHleXTYSZM, 使用:IRtzQnHYyek
+🎬 电影映射: 扫毒 -> contxt:pKzYdud4yzC0, episodeKey:ENwfBKMD40B, 使用:pKzYdud4yzC0
+🎬 电影映射: 扫毒2天地对决(粤语) -> contxt:XSKqWhcUSQB, episodeKey:WyUc19TBJBF, 使用:XSKqWhcUSQB
+🎬 电影映射: 扫毒2天地对决 -> contxt:BFBfBF9SVl2, episodeKey:qt0QdKeQ55D, 使用:BFBfBF9SVl2
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_361.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=l&verify=1753881717-qHE%2FVJUa%2FMgCfAa1lz8tRFt93xkJbcpVTfehKz26sJA%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_362.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=m&verify=1753881717-Kz61z3OtPLgfe9EfaT%2BGmWCHkFV0gT5GjgQtxMgj5XE%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_363.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=n&verify=1753881717-sgtEcJcrRGHzUtyNKCmTCIGCRA9j66jDGvN0aIRJJJk%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_364.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=o&verify=1753881717-w0m4kLKfvEcm3BoknO%2Bo6Q456UKI3Z8m3sRAMOonITo%3D
+接收到创建播放会话请求, 请求体: {
+  originalUrl: 'https://www.yfsp.tv/play/s22dEHEyL0V',
+  title: '扫毒3(粤语)'
+}
+🎬 创建播放会话: play_58479cae90e8 -> 扫毒3(粤语)
+正在提取视频URL: https://www.yfsp.tv/play/s22dEHEyL0V
+正在访问页面...
+响应: 200 https://www.yfsp.tv/play/s22dEHEyL0V
+响应: 200 https://www.yfsp.tv/assets/fonts/new/iconfont.css?v=34
+响应: 200 https://www.yfsp.tv/app/styles.a0e57d621de2f1a46b36.css
+响应: 200 https://www.yfsp.tv/assets/javascript/switchLanguage.js?v=22
+响应: 200 https://www.yfsp.tv/assets/prebid-ads.js
+响应: 200 https://www.yfsp.tv/assets/lib/DNA-3.0.0.7.js?v=3
+响应: 200 https://www.yfsp.tv/app/runtime.d804e13fa9142991ad27.js
+响应: 200 https://www.yfsp.tv/app/scripts.c49bd5259feb049cc1d3.js
+响应: 200 https://www.yfsp.tv/app/main.1b0d4ae4dc85e63781af.js
+🎬 视频请求 29: https://www.yfsp.tv/assets/javascript/empty2.mp4
+响应: 200 https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+响应: 200 https://www.yfsp.tv/assets/images/hot-icon.png
+响应: 200 https://www.yfsp.tv/assets/menu/mainmenu_fix.json?v=5
+响应: 200 https://m8.yfsp.tv/api/home/getmyregion?cinema=1&vv=582908fda9d51746b44dd2132bb49259&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+响应: 200 https://m10.yfsp.tv/api/payment/getPaymentInfo?isPromotion=3&region=GL&vv=28c9659ff8d24399d9330b66796e0d07&pub=1753882307962
+响应: 302 https://token.anygate.vip/Auth/Token.aspx?r=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2Fs22dEHEyL0V&p=cd7bfe907329c083389fffd24563fa80
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_365.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=p&verify=1753881717-fjZA5ksoP9Q7vKC7Sn5i7veVs%2F2wUzY%2B59UpWrA8FVc%3D
+响应: 200 https://www.yfsp.tv/assets/images/vip-right-new@1.png
+响应: 200 https://token.anygate.vip/Auth/Token.aspx?msg=token%20does%20not%20exist&host=https://www.yfsp.tv
+响应: 200 https://www.yfsp.tv/app/1.2bf4d279989e1aef6d12.js
+响应: 200 https://www.yfsp.tv/assets/images/vip-bg.png
+响应: 200 https://www.googletagmanager.com/gtag/js?id=G-JEW7TS0WWF
+响应: 200 https://rankv21.yfsp.tv/v3/list/gethotsearchlist?cinema=1&size=10&cacheable=1
+响应: 200 https://www.yfsp.tv/app/2.2519c00c4b6018828f01.js
+响应: 200 https://static.yfsp.tv/images/gl.png?v=8
+响应: 200 https://static.yfsp.tv/images/gl.dark.png?v=8
+响应: 200 https://www.yfsp.tv/assets/images/daily-sign-in/signIn.png
+响应: 200 https://www.yfsp.tv/assets/images/daily-sign-in/quest.png
+响应: 200 https://www.yfsp.tv/assets/images/logon.png?v=2
+响应: 200 https://www.yfsp.tv/app/4.cfcd1b3d265eac73c190.js
+响应: 206 https://www.yfsp.tv/assets/javascript/empty2.mp4
+响应: 204 https://www.google-analytics.com/g/collect?v=2&tid=G-JEW7TS0WWF&gtm=45je57s1v872240795za200zd872240795&_p=1753882306736&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105087538~105087540~105103161~105103163~105124543~105124545&cid=621664781.1753882310&ul=zh-cn&sr=1920x1080&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&are=1&frm=0&pscdl=&_s=1&dp=%2Fplay%2Fs22dEHEyL0V&sid=1753882309&sct=1&seg=0&dl=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2Fs22dEHEyL0V&dt=%E7%88%B1%E5%A3%B9%E5%B8%86%E5%9B%BD%E9%99%85%E7%89%88-%E6%B5%B7%E9%87%8F%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=5071
+响应: 200 https://static.yfsp.tv/images/rv123/US.png?v=8
+响应: 200 https://static.yfsp.tv/images/rv123/US.dark.png?v=8
+响应: 200 https://m10.yfsp.tv/v3/home/getCoBusiness?cinema=1&region=US&page=1&size=8&cacheable=1
+响应: 204 https://www.google-analytics.com/g/collect?v=2&tid=G-JEW7TS0WWF&gtm=45je57s1v872240795za200zd872240795&_p=1753882306736&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105087538~105087540~105103161~105103163~105124543~105124545&cid=621664781.1753882310&ul=zh-cn&sr=1920x1080&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&are=1&frm=0&pscdl=&_eu=AEAAAAQ&_s=2&sid=1753882309&sct=1&seg=0&dl=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2Fs22dEHEyL0V&dt=%E7%88%B1%E5%A3%B9%E5%B8%86%E5%9B%BD%E9%99%85%E7%89%88-%E6%B5%B7%E9%87%8F%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B&en=scroll&epn.percent_scrolled=90&_et=3&tfd=6151
+响应: 200 https://www.yfsp.tv/assets/images/tan_full_click.png
+响应: 200 https://www.yfsp.tv/assets/images/tan_bottom.png
+响应: 200 https://www.yfsp.tv/assets/images/location.png
+响应: 200 https://www.yfsp.tv/assets/images/head_24.png
+响应: 200 https://www.yfsp.tv/assets/images/click_o@2x.png
+响应: 200 https://www.yfsp.tv/assets/images/tan_top.png
+响应: 200 https://www.yfsp.tv/assets/fonts/new/iconfont.woff2?t=1729581485299
+响应: 200 https://www.yfsp.tv/assets/images/footer/US.png
+响应: 200 https://www.yfsp.tv/assets/images/player_logo.png
+响应: 200 https://ppt.yfsp.tv/play/o?cinema=1
+响应: 200 https://m10.yfsp.tv/v3/video/play?cinema=1&id=s22dEHEyL0V&a=1&lang=none&usersign=1&region=US&device=1&isMasterSupport=1&vv=458123767287ace2d471857510d5cb93&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+🎯 发现播放API响应: https://m10.yfsp.tv/v3/video/play?cinema=1&id=s22dEHEyL0V&a=1&lang=none&usersign=1&region=US&device=1&isMasterSupport=1&vv=458123767287ace2d471857510d5cb93&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+🎬 视频请求 74: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058712&vhash=6sm2OD3CVBveZtBk1XMJf2nSki23-CivTt9hDkUqsGc=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=e462b4d0f214ecc38cba8eb2ccf27f12&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+播放API响应内容: {"ret":200,"data":{"code":0,"msg":"","info":[{"flvPathList":[{"isHls":false,"result":"https://s1-a1.global-cdn.me/vod/3F1C61F20848-77741.mp4","dashResult":"https://s1-a1.global-cdn.me/vod/3F1C61F20848-77741.mp4","validator":null,"type":0,"link":"https://ppt.yfsp.tv/c/c?position%3dPI%26i%3d482%26r%3d4","broker":null,"backup":null,"rtmp":null,"needSign":false,"isLive":false,"bitrate":0},{"isHls":true,"result":"https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chun...
+🎯 从API响应找到M3U8: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058712&vhash=6sm2OD3CVBveZtBk1XMJf2nSki23-CivTt9hDkUqsGc=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1
+响应: 200 https://www.yfsp.tv/manifest.json
+响应: 200 https://www.yfsp.tv/assets/images/footer/android.png
+响应: 200 https://www.yfsp.tv/favicon.ico
+响应: 200 https://m10.yfsp.tv/v3/video/detail?cinema=1&device=1&player=CkPlayer&tech=HLS&country=HU&lang=cns&v=1&id=s22dEHEyL0V&region=US&vv=f8eb76a6366cc7d941d86cb5f704b5af&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+响应: 200 https://www.yfsp.tv/assets/images/footer/tv.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/customer.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/windows.png
+响应: 200 https://www.yfsp.tv/assets/images/player_logo.png?v=3
+响应: 200 https://www.yfsp.tv/assets/images/vip-label.png
+响应: 200 https://m10.yfsp.tv/api/video/getBarrage?cinema=1&page=1&size=12000&uniqueKey=35910_893275&vv=b4a81e14986e5c4a645cb84ce92680a9&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+响应: 200 https://m10.yfsp.tv/v3/video/GetRatingList?id=s22dEHEyL0V&vv=b41b8904bccc45bc18f4c2f1b346aec0&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+响应: 200 https://m10.yfsp.tv/v3/video/languagesplaylist?cinema=1&vid=s22dEHEyL0V&lsk=1&taxis=0&cid=0,1,3,22&vv=58ca821e9e0511c8244e2aee9d2b8ff8&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+🎯 发现 M3U8 URL: https://m10.yfsp.tv/v3/video/languagesplaylist?cinema=1&vid=s22dEHEyL0V&lsk=1&taxis=0&cid=0,1,3,22&vv=58ca821e9e0511c8244e2aee9d2b8ff8&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+响应: 200 https://m10.yfsp.tv/v3/video/RelativeTopicList?id=s22dEHEyL0V&page=1&size=3&vv=fb060bd3fe4b54eecbf13367aff7d346&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+响应: 200 https://m10.yfsp.tv/v3/video/commentList?cinema=1&id=35910&page=1&pagesize=10&type=1&orderBy=0&vv=51983692724d138406369e249b44250d&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+响应: 200 https://rankv21.yfsp.tv/api/home/getRelativeVideo?cinema=1&cid=0,1,3,22&title=%E6%89%AB%E6%AF%923(%E7%B2%A4%E8%AF%AD)&size=10&set=1&id=35910&vv=53b7ec3f6397ac1e27590cb4a48c373b&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+响应: 200 https://pptstatic.yfsp.tv/upload/video/202503131517401760823.jpg
+响应: 200 https://w.anygate.vip/api/Counter/PlusOne?key=AddHitToMovie&id=35910&cid=0,1,3,22&uid=0&title=fBQZR4t1jrk124l9vWrCA0&imgpath=https://static.yfsp.tv/upload/video/202308090906460620641s.gif&mixattr=%E7%8A%AF%E7%BD%AA,2023,%E9%A6%99%E6%B8%AF,%E7%B2%A4%E8%AF%AD
+响应: 200 https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058712&vhash=6sm2OD3CVBveZtBk1XMJf2nSki23-CivTt9hDkUqsGc=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=e462b4d0f214ecc38cba8eb2ccf27f12&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+🎯 发现 M3U8 URL: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058712&vhash=6sm2OD3CVBveZtBk1XMJf2nSki23-CivTt9hDkUqsGc=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=e462b4d0f214ecc38cba8eb2ccf27f12&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+响应: 200 https://www.yfsp.tv/assets/images/footer/GL.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/CA.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/UK.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/IT.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/DE.png
+🎬 视频请求 107: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_0.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=a&verify=1753885902-Pkt%2F1BPKartEyq0YSUAS3a417Lf4XkkORBFC7MF272g%3D
+响应: 200 https://www.yfsp.tv/assets/images/footer/ES.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/FR.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/JP.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/MY.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/AU.png
+响应: 200 https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_0.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=a&verify=1753885902-Pkt%2F1BPKartEyq0YSUAS3a417Lf4XkkORBFC7MF272g%3D
+响应: 200 https://www.yfsp.tv/assets/images/footer/KR.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/NZ.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/SG.png
+响应: 200 https://www.yfsp.tv/assets/images/trapezoid.png
+响应: 200 https://www.yfsp.tv/assets/images/ad-center/sec.png
+响应: 200 https://pptstatic.yfsp.tv/upload/video/202507121217501711062.jpg
+响应: 200 https://static.yfsp.tv/images/user/default_headimg.png?w=110&h=110&mode=crop
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_1.png
+响应: 200 https://static.yfsp.tv/upload/video/202308090906460620641.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://pptstatic.yfsp.tv/upload/video/202503261754505462838.jpg
+响应: 200 https://www.yfsp.tv/assets/images/ad-center/S.gif
+响应: 200 https://www.yfsp.tv/assets/images/ad-center/A.gif
+🎬 视频请求 108: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_1.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=b&verify=1753885902-nb0PQ5k57%2FHVSxrc1%2BHDSYVzOGqHfEga%2FdplIEfcd4w%3D
+响应: 200 https://www.yfsp.tv/assets/images/score-douban.png
+响应: 200 https://www.yfsp.tv/assets/images/user/icon_VIP.png
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_3.png
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_5.png
+响应: 200 https://static.yfsp.tv/images/user/isfreezed.png?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/user/202106080116091655451.png?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/user/201904210911151131874.png?w=110&h=110&mode=crop
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_2.png
+响应: 200 https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_1.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=b&verify=1753885902-nb0PQ5k57%2FHVSxrc1%2BHDSYVzOGqHfEga%2FdplIEfcd4w%3D
+响应: 200 https://static.yfsp.tv/upload/user/201806200208500813765.png?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/user/202308132038363867588.jpeg?w=110&h=110&mode=crop
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_4.png
+🎬 视频请求 110: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_2.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=c&verify=1753885902-3wngw9OSUKZIaCDj2u5baPWzMjduiOSZDJF8%2FR5Itzo%3D
+响应: 204 https://www.google-analytics.com/g/collect?v=2&tid=G-JEW7TS0WWF&gtm=45je57s1v872240795za200zd872240795&_p=1753882306736&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105087538~105087540~105103161~105103163~105124543~105124545&cid=621664781.1753882310&ul=zh-cn&sr=1920x1080&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&are=1&frm=0&pscdl=&_eu=AAAAAAQ&_s=3&dp=%2Fplay%2Fs22dEHEyL0V&sid=1753882309&sct=1&seg=1&dl=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2Fs22dEHEyL0V&dt=%E7%88%B1%E5%A3%B9%E5%B8%86%E5%9B%BD%E9%99%85%E7%89%88-%E6%B5%B7%E9%87%8F%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B&en=page_view&_ee=1&_et=1075&tfd=11160
+响应: 200 https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_2.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=c&verify=1753885902-3wngw9OSUKZIaCDj2u5baPWzMjduiOSZDJF8%2FR5Itzo%3D
+响应: 200 https://static.yfsp.tv/upload/video/201401230417241724808.jpg?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/201907161230263004883.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202407190916371681238.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202503210856175678623.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202507181306490638636.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202403061611411173583.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202203260121582146376.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/201812201658575871833.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/201906191346244678530.gif?w=216&h=309&format=jpg&mode=stretch
+页面加载完成
+尝试查找并点击播放按钮...
+找到播放按钮: [class*="play"]
+已点击播放按钮
+点击后立即找到M3U8，停止搜索
+✅ 成功提取到M3U8地址: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058712&vhash=6sm2OD3CVBveZtBk1XMJf2nSki23-CivTt9hDkUqsGc=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=e462b4d0f214ecc38cba8eb2ccf27f12&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058712&vhash=6sm2OD3CVBveZtBk1XMJf2nSki23-CivTt9hDkUqsGc=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=e462b4d0f214ecc38cba8eb2ccf27f12&pub=CJSrCpWuCZCmDYuoD5yggQzCZCkCJStBZGmBZGvNsOpCc5cOJSqOs8pDJGoOp9YEJasOsCoCpavOJbXC6GmNsOqDJ8qE38pCpKtDpKvDJ8sD31XDs9YPZ4sCZHcDpWp
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_366.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=q&verify=1753881717-jvxuVRiUN%2F0zW4ZCqiAEPMcbd3R2lpNrXk4tt%2Bryr6k%3D
+处理 M3U8 文件
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_0.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=a&verify=1753885910-OQTlbcIcvKndHV6SHUNhoZdWDgHxq0xWXI32PjScBzU%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_1.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=b&verify=1753885910-QQWUoGUx9WwQF2JjexzQ7k03S3WPOTLG5USMJO%2B%2FMx0%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_2.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=c&verify=1753885910-%2B%2BHBwc3gVYUorkv6sV2qZGKRyyJXy0pbkaTFVW8PhJM%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_367.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=r&verify=1753881717-dPjZb5YmQwD9ZN2klyhYaCUkzm2%2BMltpRDwDmdiCbvY%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_368.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=s&verify=1753881717-Ed1U%2BfzBIucR0bstadvQDDggj0HOAqQq58wLP3yPj6k%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_3.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=d&verify=1753885910-yEt2J93EwQPOtz3NsEs0ZBXN0hi8SXvhtcq8ZlUZiLM%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_369.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=t&verify=1753881717-icDrtzO18V2ucPimc%2BEo47oe40xBTi7hq%2BHngE%2BzMKo%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_4.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=e&verify=1753885910-IwZ4CmNUF0y5yKf8XzqCL6WgoOQwWuIQnJIq5mjYEus%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_370.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=u&verify=1753881717-GKtY9HSkDhKWGzY9vUNb3nYJ00U0AnXD9lk%2Fs%2BJZybo%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_5.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=f&verify=1753885910-oeg1VzGq92SJyVJOdfYybtxaAfx4Df77QnPddp2KY2o%3D
+正在提取视频URL: https://www.yfsp.tv/play/s22dEHEyL0V
+正在访问页面...
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_371.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=v&verify=1753881717-EBJVuM1P5cG6PlCd03Ph3FmLovFSu%2BhR0EnaFCnGXOo%3D
+响应: 200 https://www.yfsp.tv/play/s22dEHEyL0V
+响应: 200 https://www.yfsp.tv/assets/fonts/new/iconfont.css?v=34
+响应: 200 https://www.yfsp.tv/assets/javascript/switchLanguage.js?v=22
+响应: 200 https://www.yfsp.tv/app/styles.a0e57d621de2f1a46b36.css
+响应: 200 https://www.yfsp.tv/assets/lib/DNA-3.0.0.7.js?v=3
+响应: 200 https://www.yfsp.tv/app/runtime.d804e13fa9142991ad27.js
+响应: 200 https://www.yfsp.tv/assets/prebid-ads.js
+响应: 200 https://www.yfsp.tv/app/scripts.c49bd5259feb049cc1d3.js
+响应: 200 https://www.yfsp.tv/app/main.1b0d4ae4dc85e63781af.js
+🎬 视频请求 30: https://www.yfsp.tv/assets/javascript/empty2.mp4
+响应: 200 https://www.yfsp.tv/assets/images/hot-icon.png
+响应: 200 https://www.yfsp.tv/assets/fonts/new/iconfont.woff2?t=1729581485299
+响应: 200 https://www.yfsp.tv/assets/menu/mainmenu_fix.json?v=5
+响应: 200 https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+响应: 200 https://m10.yfsp.tv/api/payment/getPaymentInfo?isPromotion=3&region=GL&vv=4668c8b5bc9406a6960ed3d1a348a7f7&pub=1753882382443
+响应: 200 https://rankv21.yfsp.tv/v3/list/gethotsearchlist?cinema=1&size=10&cacheable=1
+响应: 200 https://static.yfsp.tv/images/gl.dark.png?v=8
+响应: 200 https://static.yfsp.tv/images/gl.png?v=8
+响应: 302 https://token.anygate.vip/Auth/Token.aspx?r=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2Fs22dEHEyL0V&p=cd7bfe907329c083389fffd24563fa80
+响应: 200 https://www.yfsp.tv/assets/images/vip-bg.png
+响应: 200 https://m8.yfsp.tv/api/home/getmyregion?cinema=1&vv=bb79b2437991884be3e6d3671282c258&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+响应: 200 https://www.yfsp.tv/assets/images/vip-right-new@1.png
+响应: 200 https://www.yfsp.tv/app/2.2519c00c4b6018828f01.js
+响应: 200 https://www.yfsp.tv/app/1.2bf4d279989e1aef6d12.js
+响应: 200 https://www.yfsp.tv/app/4.cfcd1b3d265eac73c190.js
+响应: 200 https://www.yfsp.tv/assets/images/daily-sign-in/signIn.png
+响应: 206 https://www.yfsp.tv/assets/javascript/empty2.mp4
+响应: 200 https://www.yfsp.tv/assets/images/logon.png?v=2
+响应: 200 https://static.yfsp.tv/images/rv123/US.dark.png?v=8
+响应: 200 https://static.yfsp.tv/images/rv123/US.png?v=8
+响应: 200 https://www.yfsp.tv/assets/images/daily-sign-in/quest.png
+响应: 200 https://m10.yfsp.tv/v3/home/getCoBusiness?cinema=1&region=US&page=1&size=8&cacheable=1
+响应: 200 https://www.yfsp.tv/assets/images/tan_top.png
+响应: 200 https://www.yfsp.tv/assets/images/head_24.png
+响应: 200 https://www.yfsp.tv/assets/images/click_o@2x.png
+响应: 200 https://token.anygate.vip/Auth/Token.aspx?msg=token%20does%20not%20exist&host=https://www.yfsp.tv
+响应: 200 https://www.yfsp.tv/assets/images/tan_bottom.png
+响应: 200 https://www.yfsp.tv/assets/images/location.png
+响应: 200 https://www.yfsp.tv/assets/images/tan_full_click.png
+响应: 200 https://www.googletagmanager.com/gtag/js?id=G-JEW7TS0WWF
+响应: 200 https://m10.yfsp.tv/v3/video/play?cinema=1&id=s22dEHEyL0V&a=1&lang=none&usersign=1&region=US&device=1&isMasterSupport=1&vv=de8a9e070c6162de0cf6cdf32be76c91&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+🎯 发现播放API响应: https://m10.yfsp.tv/v3/video/play?cinema=1&id=s22dEHEyL0V&a=1&lang=none&usersign=1&region=US&device=1&isMasterSupport=1&vv=de8a9e070c6162de0cf6cdf32be76c91&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+🎬 视频请求 69: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058785&vhash=QTcbiEaCBn36XxQWOeDWUlIALqmAHMWVk1eWW8fBhaE=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=efd649d62b2205585f3f9fa5474954b9&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+播放API响应内容: {"ret":200,"data":{"code":0,"msg":"","info":[{"flvPathList":[{"isHls":false,"result":"https://s1-a1.global-cdn.me/vod/3F1C61F20848-77741.mp4","dashResult":"https://s1-a1.global-cdn.me/vod/3F1C61F20848-77741.mp4","validator":null,"type":0,"link":"https://ppt.yfsp.tv/c/c?position%3dPI%26i%3d482%26r%3d4","broker":null,"backup":null,"rtmp":null,"needSign":false,"isLive":false,"bitrate":0},{"isHls":true,"result":"https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chun...
+🎯 从API响应找到M3U8: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058785&vhash=QTcbiEaCBn36XxQWOeDWUlIALqmAHMWVk1eWW8fBhaE=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1
+响应: 200 https://www.yfsp.tv/assets/images/footer/US.png
+响应: 200 https://www.yfsp.tv/assets/images/vip-label.png
+响应: 200 https://www.yfsp.tv/assets/images/player_logo.png?v=3
+响应: 200 https://m10.yfsp.tv/v3/video/detail?cinema=1&device=1&player=CkPlayer&tech=HLS&country=HU&lang=cns&v=1&id=s22dEHEyL0V&region=US&vv=439d5eda2ecdd4c036ce60c97d70a9c6&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+响应: 200 https://ppt.yfsp.tv/play/o?cinema=1
+响应: 200 https://m10.yfsp.tv/v3/video/GetRatingList?id=s22dEHEyL0V&vv=4cad04709b9f91d9188e2338096b756f&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+响应: 200 https://m10.yfsp.tv/v3/video/languagesplaylist?cinema=1&vid=s22dEHEyL0V&lsk=1&taxis=0&cid=0,1,3,22&vv=79a5d766dc6d3061d013e64e71d0c276&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+🎯 发现 M3U8 URL: https://m10.yfsp.tv/v3/video/languagesplaylist?cinema=1&vid=s22dEHEyL0V&lsk=1&taxis=0&cid=0,1,3,22&vv=79a5d766dc6d3061d013e64e71d0c276&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+响应: 200 https://m10.yfsp.tv/v3/video/RelativeTopicList?id=s22dEHEyL0V&page=1&size=3&vv=de83c05a02502f6cd2eeb7c82b047deb&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+响应: 200 https://m10.yfsp.tv/v3/video/commentList?cinema=1&id=35910&page=1&pagesize=10&type=1&orderBy=0&vv=9a8d8d47abee7ee730d193b0f583d3cd&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+响应: 200 https://rankv21.yfsp.tv/api/home/getRelativeVideo?cinema=1&cid=0,1,3,22&title=%E6%89%AB%E6%AF%923(%E7%B2%A4%E8%AF%AD)&size=10&set=1&id=35910&vv=8b24d13132d1026f1d68758811147fdb&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+响应: 200 https://m10.yfsp.tv/api/video/getBarrage?cinema=1&page=1&size=12000&uniqueKey=35910_893275&vv=748ad02a9863127b18daedb81fdc017f&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+响应: 204 https://www.google-analytics.com/g/collect?v=2&tid=G-JEW7TS0WWF&gtm=45je57s1v872240795za200zd872240795&_p=1753882381648&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105103161~105103163~105124543~105124545&cid=579656209.1753882385&ul=zh-cn&sr=1920x1080&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&are=1&frm=0&pscdl=&_s=1&dp=%2Fplay%2Fs22dEHEyL0V&sid=1753882384&sct=1&seg=0&dl=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2Fs22dEHEyL0V&dt=%E7%88%B1%E5%A3%B9%E5%B8%86%E5%9B%BD%E9%99%85%E7%89%88-%E6%B5%B7%E9%87%8F%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=5581
+响应: 200 https://www.yfsp.tv/manifest.json
+响应: 200 https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058785&vhash=QTcbiEaCBn36XxQWOeDWUlIALqmAHMWVk1eWW8fBhaE=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=efd649d62b2205585f3f9fa5474954b9&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+🎯 发现 M3U8 URL: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058785&vhash=QTcbiEaCBn36XxQWOeDWUlIALqmAHMWVk1eWW8fBhaE=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=efd649d62b2205585f3f9fa5474954b9&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+响应: 200 https://w.anygate.vip/api/Counter/PlusOne?key=AddHitToMovie&id=35910&cid=0,1,3,22&uid=0&title=fBQZR4t1jrk124l9vWrCA0&imgpath=https://static.yfsp.tv/upload/video/202308090906460620641s.gif&mixattr=%E7%8A%AF%E7%BD%AA,2023,%E9%A6%99%E6%B8%AF,%E7%B2%A4%E8%AF%AD
+🎬 视频请求 105: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_0.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=a&verify=1753885975-y%2B9poXlq2mVRBV5olTiE9MdgaTPXTbIHwed4uBSIiws%3D
+响应: 200 https://pptstatic.yfsp.tv/upload/video/202503131517401760823.jpg
+响应: 200 https://www.yfsp.tv/assets/images/footer/android.png
+响应: 200 https://www.yfsp.tv/assets/images/player_logo.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/customer.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/tv.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/windows.png
+响应: 200 https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_0.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=a&verify=1753885975-y%2B9poXlq2mVRBV5olTiE9MdgaTPXTbIHwed4uBSIiws%3D
+响应: 200 https://www.yfsp.tv/assets/images/footer/GL.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/CA.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/DE.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/IT.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/UK.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/FR.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/MY.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/ES.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/AU.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/JP.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/NZ.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/KR.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/SG.png
+响应: 200 https://www.yfsp.tv/assets/images/trapezoid.png
+响应: 200 https://pptstatic.yfsp.tv/upload/video/202503261754505462838.jpg
+🎬 视频请求 106: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_1.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=b&verify=1753885975-hktxKg1nboZryd2tND75q%2FaMVdFFQi274RVvhlqvi5A%3D
+响应: 200 https://www.yfsp.tv/assets/images/ad-center/sec.png
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_1.png
+响应: 200 https://pptstatic.yfsp.tv/upload/video/202507121217501711062.jpg
+响应: 200 https://static.yfsp.tv/images/user/default_headimg.png?w=110&h=110&mode=crop
+响应: 200 https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_1.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=b&verify=1753885975-hktxKg1nboZryd2tND75q%2FaMVdFFQi274RVvhlqvi5A%3D
+响应: 200 https://www.yfsp.tv/assets/images/ad-center/A.gif
+响应: 200 https://www.yfsp.tv/assets/images/ad-center/S.gif
+响应: 200 https://www.yfsp.tv/assets/images/score-douban.png
+响应: 200 https://static.yfsp.tv/upload/video/202308090906460620641.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://www.yfsp.tv/assets/images/user/icon_VIP.png
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_3.png
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_5.png
+🎬 视频请求 107: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_2.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=c&verify=1753885975-mWJLD9YX9%2BEx76SAeFsX0NDRlZ3TkBUeQFJjoh5n5Gc%3D
+响应: 200 https://static.yfsp.tv/images/user/isfreezed.png?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/user/202106080116091655451.png?w=110&h=110&mode=crop
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_4.png
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_2.png
+响应: 200 https://static.yfsp.tv/upload/user/202308132038363867588.jpeg?w=110&h=110&mode=crop
+响应: 200 https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_2.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=c&verify=1753885975-mWJLD9YX9%2BEx76SAeFsX0NDRlZ3TkBUeQFJjoh5n5Gc%3D
+响应: 200 https://static.yfsp.tv/upload/user/201806200208500813765.png?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/video/201401230417241724808.jpg?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/user/201904210911151131874.png?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/video/201907161230263004883.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202503210856175678623.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202407190916371681238.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 204 https://www.google-analytics.com/g/collect?v=2&tid=G-JEW7TS0WWF&gtm=45je57s1v872240795za200zd872240795&_p=1753882381648&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105103161~105103163~105124543~105124545&cid=579656209.1753882385&ul=zh-cn&sr=1920x1080&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&are=1&frm=0&pscdl=&_eu=AAAAAAQ&_s=2&dp=%2Fplay%2Fs22dEHEyL0V&sid=1753882384&sct=1&seg=1&dl=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2Fs22dEHEyL0V&dt=%E7%88%B1%E5%A3%B9%E5%B8%86%E5%9B%BD%E9%99%85%E7%89%88-%E6%B5%B7%E9%87%8F%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B&en=page_view&_ee=1&_et=3&tfd=10586
+响应: 200 https://static.yfsp.tv/upload/video/202507181306490638636.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202403061611411173583.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/201812201658575871833.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/201906191346244678530.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202203260121582146376.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://www.yfsp.tv/favicon.ico
+页面加载完成
+尝试查找并点击播放按钮...
+找到播放按钮: [class*="play"]
+已点击播放按钮
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_372.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=w&verify=1753881717-TIzsaTw78x6bhQJ38e6N02uyi15fsJ7u%2FgdzFqPyIWA%3D
+点击后立即找到M3U8，停止搜索
+✅ 成功提取到M3U8地址: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058785&vhash=QTcbiEaCBn36XxQWOeDWUlIALqmAHMWVk1eWW8fBhaE=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=efd649d62b2205585f3f9fa5474954b9&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/chunklist.m3u8?vendtime=1754058785&vhash=QTcbiEaCBn36XxQWOeDWUlIALqmAHMWVk1eWW8fBhaE=&vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&us=1&vv=efd649d62b2205585f3f9fa5474954b9&pub=CJSrCpWuCZCuCIunDJbVLLDVCZCkCJStBZGmBZGvNp4mD3PZPJ4tC68sDZGvPMDYOM9bCZ4vCZGqOZ8nE68rNpbaOJ8sP3KtC35XC38uPMOpPMLXCZXcCZHcE6HcDpDZ
+处理 M3U8 文件
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_0.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=a&verify=1753885984-5aaKpRSHLoa4MMTLAfX%2B75Gqb40s7B8wHLybK8ozZg8%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_1.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=b&verify=1753885984-eihYFaEgHOXIg86NBVtvE%2B6kZJdUFOde86aw7vQR0oc%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_2.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=c&verify=1753885984-78eqOhzfwa7Z87QaImWaERnFgcdOSIeO4%2Buft7ymAmU%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_373.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=x&verify=1753881717-2C0EjY2Haez3%2FNsRh4gkDg0SFWaftIlGdbBxSfe0aOY%3D
+🚀 API 请求为 11j9RDawU61 获取剧集列表...
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_374.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=y&verify=1753881717-0nfBJhNZYUSm5i9hfLBuLCoKsfn0mxaWZRqGEW%2Bt%2FME%3D
+Cheerio未能提取到 11j9RDawU61 的剧集, 正在尝试使用Puppeteer回退...
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_375.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=a&verify=1753881717-%2FeHV6QKuvAwzFo4XVTzr6L%2B5WymSy%2BcOx7OKTkofPeE%3D
+✅ API 成功获取 33 集
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_376.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=b&verify=1753881717-XmJfBXBXcl83JMW0Ah8%2Bow782X6GnDTZV8szAcDe5B8%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_377.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=c&verify=1753881717-R4hQimGZ6GpjHY%2BowFCAU%2B3Z7FnQGSoYbOKC5mGmaEM%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_378.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=d&verify=1753881717-NbekWg8OTvIn%2F9VZt5RyPQFmmesAztLaz96r%2BS8680Q%3D
+接收到创建播放会话请求, 请求体: {
+  originalUrl: 'https://www.yfsp.tv/play/11j9RDawU61?id=JIgHc6DRMYD',
+  title: '扫毒风暴 - 01'
+}
+🎬 创建播放会话: play_024e4e21cf4d -> 扫毒风暴 - 01
+正在提取视频URL: https://www.yfsp.tv/play/11j9RDawU61?id=JIgHc6DRMYD
+正在访问页面...
+响应: 200 https://www.yfsp.tv/play/11j9RDawU61?id=JIgHc6DRMYD
+响应: 200 https://www.yfsp.tv/assets/fonts/new/iconfont.css?v=34
+响应: 200 https://www.yfsp.tv/app/styles.a0e57d621de2f1a46b36.css
+响应: 200 https://www.yfsp.tv/assets/javascript/switchLanguage.js?v=22
+响应: 200 https://www.yfsp.tv/assets/prebid-ads.js
+响应: 200 https://www.yfsp.tv/app/runtime.d804e13fa9142991ad27.js
+响应: 200 https://www.yfsp.tv/assets/lib/DNA-3.0.0.7.js?v=3
+响应: 200 https://www.yfsp.tv/app/scripts.c49bd5259feb049cc1d3.js
+响应: 200 https://www.yfsp.tv/app/main.1b0d4ae4dc85e63781af.js
+🎬 视频请求 29: https://www.yfsp.tv/assets/javascript/empty2.mp4
+响应: 200 https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+响应: 200 https://www.yfsp.tv/assets/images/hot-icon.png
+响应: 200 https://www.yfsp.tv/assets/menu/mainmenu_fix.json?v=5
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_379.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=e&verify=1753881717-y4ECfJkxIQJhVaZR7Syhrc4BjOZLDTkjP5IH7q1v4m4%3D
+响应: 200 https://rankv21.yfsp.tv/v3/list/gethotsearchlist?cinema=1&size=10&cacheable=1
+响应: 200 https://m10.yfsp.tv/api/payment/getPaymentInfo?isPromotion=3&region=GL&vv=c2e4e866978b99803a0889dad40eddcc&pub=1753882473101
+响应: 200 https://m8.yfsp.tv/api/home/getmyregion?cinema=1&vv=2f608ded20f858195d363c6be5e0d7e1&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+响应: 200 https://www.googletagmanager.com/gtag/js?id=G-JEW7TS0WWF
+响应: 200 https://www.yfsp.tv/assets/images/vip-bg.png
+响应: 302 https://token.anygate.vip/Auth/Token.aspx?r=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2F11j9RDawU61%3Fid%3DJIgHc6DRMYD&p=cd7bfe907329c083389fffd24563fa80
+响应: 200 https://www.yfsp.tv/assets/images/vip-right-new@1.png
+响应: 200 https://www.yfsp.tv/app/1.2bf4d279989e1aef6d12.js
+响应: 200 https://token.anygate.vip/Auth/Token.aspx?msg=token%20does%20not%20exist&host=https://www.yfsp.tv
+响应: 200 https://static.yfsp.tv/images/gl.dark.png?v=8
+响应: 200 https://static.yfsp.tv/images/gl.png?v=8
+响应: 204 https://www.google-analytics.com/g/collect?v=2&tid=G-JEW7TS0WWF&gtm=45je57s1v872240795za200zd872240795&_p=1753882472128&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105087535~105087537~105103161~105103163~105124543~105124545&cid=364879321.1753882475&ul=zh-cn&sr=1920x1080&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&are=1&frm=0&pscdl=&_s=1&dp=%2Fplay%2F11j9RDawU61%3Fid%3DJIgHc6DRMYD&sid=1753882474&sct=1&seg=0&dl=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2F11j9RDawU61%3Fid%3DJIgHc6DRMYD&dt=%E7%88%B1%E5%A3%B9%E5%B8%86%E5%9B%BD%E9%99%85%E7%89%88-%E6%B5%B7%E9%87%8F%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=4760
+响应: 200 https://www.yfsp.tv/assets/images/daily-sign-in/quest.png
+响应: 200 https://www.yfsp.tv/assets/images/daily-sign-in/signIn.png
+响应: 200 https://www.yfsp.tv/app/4.cfcd1b3d265eac73c190.js
+响应: 200 https://static.yfsp.tv/images/rv123/US.dark.png?v=8
+响应: 206 https://www.yfsp.tv/assets/javascript/empty2.mp4
+响应: 200 https://www.yfsp.tv/app/2.2519c00c4b6018828f01.js
+响应: 200 https://static.yfsp.tv/images/rv123/US.png?v=8
+响应: 200 https://www.yfsp.tv/assets/images/logon.png?v=2
+响应: 200 https://www.yfsp.tv/assets/fonts/new/iconfont.woff2?t=1729581485299
+响应: 200 https://m10.yfsp.tv/v3/home/getCoBusiness?cinema=1&region=US&page=1&size=8&cacheable=1
+响应: 200 https://www.yfsp.tv/assets/images/click_o@2x.png
+响应: 204 https://www.google-analytics.com/g/collect?v=2&tid=G-JEW7TS0WWF&gtm=45je57s1v872240795za200zd872240795&_p=1753882472128&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105087535~105087537~105103161~105103163~105124543~105124545&cid=364879321.1753882475&ul=zh-cn&sr=1920x1080&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&are=1&frm=0&pscdl=&_eu=AEAAAAQ&_s=2&sid=1753882474&sct=1&seg=0&dl=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2F11j9RDawU61%3Fid%3DJIgHc6DRMYD&dt=%E7%88%B1%E5%A3%B9%E5%B8%86%E5%9B%BD%E9%99%85%E7%89%88-%E6%B5%B7%E9%87%8F%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B&en=scroll&epn.percent_scrolled=90&_et=4&tfd=6146
+响应: 200 https://www.yfsp.tv/assets/images/tan_bottom.png
+响应: 200 https://www.yfsp.tv/assets/images/head_24.png
+响应: 200 https://www.yfsp.tv/assets/images/tan_full_click.png
+响应: 200 https://m10.yfsp.tv/v3/video/play?cinema=1&id=JIgHc6DRMYD&a=0&lang=none&usersign=1&region=US&device=1&isMasterSupport=1&vv=b9144f890f7a9cade9222bb07b681c1b&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+🎯 发现播放API响应: https://m10.yfsp.tv/v3/video/play?cinema=1&id=JIgHc6DRMYD&a=0&lang=none&usersign=1&region=US&device=1&isMasterSupport=1&vv=b9144f890f7a9cade9222bb07b681c1b&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+播放API响应内容: {"ret":200,"data":{"code":0,"msg":"","info":[{"flvPathList":[{"isHls":false,"result":"https://s1-a1.global-cdn.me/vod/3F1C61F20848-77741.mp4","dashResult":"https://s1-a1.global-cdn.me/vod/3F1C61F20848-77741.mp4","validator":null,"type":0,"link":"https://ppt.yfsp.tv/c/c?position%3dPI%26i%3d482%26r%3d4","broker":null,"backup":null,"rtmp":null,"needSign":false,"isLive":false,"bitrate":0},{"isHls":true,"result":"https://m10.yfsp.tv/v3/video/masterplaylist/xrd1pwGvymxT1F3yzAQfm08wEDzf0etb9","dashResu...
+🎯 从API响应找到M3U8: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/chunklist.m3u8?vendtime=1754058877&vhash=tbX1M9sLhA_LIs18SYnjstxCeZuIyZBcGiQ7P1-eQxA=&vCustomParameter=0_23.177.40.49_US_1_0&lb=370348f7e813f9fa173c15da7fceb182&us=1
+响应: 200 https://www.yfsp.tv/assets/images/tan_top.png
+响应: 200 https://www.yfsp.tv/assets/images/location.png
+响应: 200 https://www.yfsp.tv/assets/images/player_logo.png?v=3
+响应: 200 https://www.yfsp.tv/assets/images/vip-label.png
+响应: 200 https://ppt.yfsp.tv/play/o?cinema=1
+响应: 200 https://m10.yfsp.tv/v3/video/detail?cinema=1&device=1&player=CkPlayer&tech=HLS&country=HU&lang=cns&v=1&id=11j9RDawU61&region=US&vv=c7d8542d2720729492b81572241ea292&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+响应: 200 https://m10.yfsp.tv/api/video/getBarrage?cinema=1&page=1&size=12000&uniqueKey=41376_1134806&vv=b56ca7b6b2498ccc99d1b3093a2a0fd9&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+响应: 200 https://www.yfsp.tv/manifest.json
+响应: 200 https://m10.yfsp.tv/v3/video/GetRatingList?id=11j9RDawU61&vv=b405802a60f2ec61a436d0d2084a3117&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+响应: 200 https://m10.yfsp.tv/v3/video/languagesplaylist?cinema=1&vid=11j9RDawU61&lsk=1&taxis=0&cid=0,1,4,149&vv=cd227ad937ddaff5b78dc4c9285ecaac&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+🎯 发现 M3U8 URL: https://m10.yfsp.tv/v3/video/languagesplaylist?cinema=1&vid=11j9RDawU61&lsk=1&taxis=0&cid=0,1,4,149&vv=cd227ad937ddaff5b78dc4c9285ecaac&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+响应: 200 https://m10.yfsp.tv/v3/video/RelativeTopicList?id=11j9RDawU61&page=1&size=3&vv=b918f2099f28cce4c3f40325f7b6356b&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+响应: 200 https://m10.yfsp.tv/v3/video/masterplaylist/xrd1pwGvymxT1F3yzAQfm08wEDzf0etb9?vv=06764686973f39c1c773c512a48432cb&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+🎯 发现 M3U8 URL: https://m10.yfsp.tv/v3/video/masterplaylist/xrd1pwGvymxT1F3yzAQfm08wEDzf0etb9?vv=06764686973f39c1c773c512a48432cb&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+🎬 视频请求 91: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/chunklist.m3u8?vendtime=1754058878&vhash=owvsaunhWqmqDnPUU1-vLCKcKbkFZziXn8XQDhhMUoM=&vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182
+响应: 200 https://rankv21.yfsp.tv/api/home/getRelativeVideo?cinema=1&cid=0,1,4,149&title=%E6%89%AB%E6%AF%92%E9%A3%8E%E6%9A%B4&size=10&set=1&id=41376&vv=e2c9ad455e57822e67cad4377c267df8&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+响应: 200 https://m10.yfsp.tv/v3/video/commentList?cinema=1&id=41376&page=1&pagesize=10&type=1&orderBy=0&vv=b7b43587f6895ab0b7b9f13a28855ffd&pub=CJSrCpWuCZGtCIurCpDVLLDVCZCkCJStBZGmBZGvNs8uPZCvOZ5aCcLbCpGvOJHXE6KsOJLYDJbZE3WrDpCoNpbYC3DXOp4sCZXZPc5XCpaoCsGmPJGnCJKvC3XZOs5Y
+响应: 200 https://pptstatic.yfsp.tv/upload/video/202503131517401760823.jpg
+响应: 200 https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/chunklist.m3u8?vendtime=1754058878&vhash=owvsaunhWqmqDnPUU1-vLCKcKbkFZziXn8XQDhhMUoM=&vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182
+🎯 发现 M3U8 URL: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/chunklist.m3u8?vendtime=1754058878&vhash=owvsaunhWqmqDnPUU1-vLCKcKbkFZziXn8XQDhhMUoM=&vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182
+🎬 视频请求 119: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_9.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=j&verify=1753886079-os8QL3ZxKruIje2%2FZi2uk2Ca39Gd%2FIXkHyFw5u8qK98%3D
+响应: 200 https://www.yfsp.tv/assets/images/player_logo.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/US.png
+响应: 200 https://w.anygate.vip/api/Counter/PlusOne?key=AddHitToMovie&id=41376&cid=0,1,4,149&uid=0&title=I7CCCcxVYvUlFkmIgOkEx1&imgpath=https://static.yfsp.tv/upload/video/202507121330433041634s.gif&mixattr=%E8%AD%A6%E5%8C%AA,2025,%E5%A4%A7%E9%99%86,%E5%9B%BD%E8%AF%AD
+响应: 200 https://www.yfsp.tv/assets/images/footer/android.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/tv.png
+响应: 200 https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_9.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=j&verify=1753886079-os8QL3ZxKruIje2%2FZi2uk2Ca39Gd%2FIXkHyFw5u8qK98%3D
+响应: 200 https://www.yfsp.tv/assets/images/footer/windows.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/customer.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/GL.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/CA.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/IT.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/UK.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/FR.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/DE.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/ES.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/MY.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/AU.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/JP.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/NZ.png
+响应: 200 https://www.yfsp.tv/assets/images/footer/KR.png
+响应: 200 https://pptstatic.yfsp.tv/upload/video/202503261754505462838.jpg
+响应: 200 https://www.yfsp.tv/assets/images/footer/SG.png
+响应: 200 https://www.yfsp.tv/assets/images/trapezoid.png
+响应: 200 https://www.yfsp.tv/assets/images/ad-center/sec.png
+响应: 200 https://pptstatic.yfsp.tv/upload/video/202507121217501711062.jpg
+响应: 200 https://static.yfsp.tv/upload/up/201709190100102.jpg?w=110&h=110&mode=crop
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_1.png
+响应: 200 https://www.yfsp.tv/assets/images/ad-center/S.gif
+响应: 200 https://static.yfsp.tv/upload/video/202507121330433041634.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 204 https://www.google-analytics.com/g/collect?v=2&tid=G-JEW7TS0WWF&gtm=45je57s1v872240795za200zd872240795&_p=1753882472128&gcd=13l3l3l3l1l1&npa=0&dma=0&tag_exp=101509157~103116026~103200004~103233427~104684208~104684211~104948813~105087535~105087537~105103161~105103163~105124543~105124545&cid=364879321.1753882475&ul=zh-cn&sr=1920x1080&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&are=1&frm=0&pscdl=&_eu=AAAAAAQ&_s=3&dp=%2Fplay%2F11j9RDawU61%3Fid%3DJIgHc6DRMYD&sid=1753882474&sct=1&seg=1&dl=https%3A%2F%2Fwww.yfsp.tv%2Fplay%2F11j9RDawU61%3Fid%3DJIgHc6DRMYD&dt=%E7%88%B1%E5%A3%B9%E5%B8%86%E5%9B%BD%E9%99%85%E7%89%88-%E6%B5%B7%E9%87%8F%E9%AB%98%E6%B8%85%E8%A7%86%E9%A2%91%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E8%A7%82%E7%9C%8B&en=page_view&_ee=1&_et=1380&tfd=11151
+🎬 视频请求 121: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_10.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=k&verify=1753886079-HJffOxbOE63dyxf9mOIiC070x4tceD2OPvT3Os6Z6Nw%3D
+响应: 200 https://www.yfsp.tv/assets/images/ad-center/A.gif
+响应: 200 https://www.yfsp.tv/assets/images/play-2.gif
+响应: 200 https://www.yfsp.tv/assets/images/score-douban.png
+响应: 200 https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_10.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=k&verify=1753886079-HJffOxbOE63dyxf9mOIiC070x4tceD2OPvT3Os6Z6Nw%3D
+响应: 200 https://static.yfsp.tv/upload/video/202507121330433041634.gif?w=200&mode=crop&format=jpg
+响应: 200 https://static.yfsp.tv/upload/video/202507101421232157164.gif?w=200&mode=crop&format=jpg
+响应: 200 https://static.yfsp.tv/upload/video/202507051635473516483.gif?w=200&mode=crop&format=jpg
+响应: 200 https://static.yfsp.tv/upload/video/202503180300550064636.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202012120123112311850.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202505221542114228412.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/201709221544474473843.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202005282209060976332.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202105061955335557142.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/201709231225312583721.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://www.yfsp.tv/assets/images/user/icon_VIP.png
+响应: 200 https://static.yfsp.tv/upload/video/202010171213271336184.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_2.png
+响应: 200 https://static.yfsp.tv/upload/video/202212191324092484874.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/video/202412291154255460087.gif?w=216&h=309&format=jpg&mode=stretch
+响应: 200 https://static.yfsp.tv/upload/emoji/classic/553.gif?v=11
+响应: 200 https://static.yfsp.tv/images/user/default_headimg.png?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/user/202507051939153938086.png?w=110&h=110&mode=crop
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_3.png
+响应: 200 https://static.yfsp.tv/upload/user/202401140243254380156.png?w=110&h=110&mode=crop
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_6.png
+响应: 200 https://static.yfsp.tv/upload/user/202507231817321751642.png?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/user/202504052327292767460.png?w=110&h=110&mode=crop
+🎬 视频请求 122: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_11.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=l&verify=1753886079-iIzS4zF%2F%2Bupejxntl652lDalBEvxlvXbQ1z8Jo0reVU%3D
+响应: 200 https://static.yfsp.tv/upload/user/202504202101140157002.jpg?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/user/202309080515231567632.jpg?w=110&h=110&mode=crop
+响应: 200 https://static.yfsp.tv/upload/user/202409181328292848104.jpg?w=110&h=110&mode=crop
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_4.png
+响应: 200 https://static.yfsp.tv/upload/user/202006040201340136302.png?w=110&h=110&mode=crop
+响应: 200 https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_11.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=l&verify=1753886079-iIzS4zF%2F%2Bupejxntl652lDalBEvxlvXbQ1z8Jo0reVU%3D
+响应: 200 https://static.yfsp.tv/upload/user/202507201257475728180.png?w=110&h=110&mode=crop
+响应: 200 https://www.yfsp.tv/assets/images/user-center/lv_5.png
+页面加载完成
+尝试查找并点击播放按钮...
+找到播放按钮: [class*="play"]
+已点击播放按钮
+响应: 200 https://www.yfsp.tv/favicon.ico
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_380.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=f&verify=1753881717-Y0XmMuEWOCaA%2BIVDYPV3T1HhtdHDW%2Fepej%2BBmLqTGg0%3D
+🎬 视频请求 124: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_12.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=m&verify=1753886079-SCcbGHsWr2Avl7DdA45ua52f%2FihamgCE0HqcbUrl3oc%3D
+响应: 200 https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_12.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=m&verify=1753886079-SCcbGHsWr2Avl7DdA45ua52f%2FihamgCE0HqcbUrl3oc%3D
+点击后立即找到M3U8，停止搜索
+✅ 成功提取到M3U8地址: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/chunklist.m3u8?vendtime=1754058878&vhash=owvsaunhWqmqDnPUU1-vLCKcKbkFZziXn8XQDhhMUoM=&vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/chunklist.m3u8?vendtime=1754058878&vhash=owvsaunhWqmqDnPUU1-vLCKcKbkFZziXn8XQDhhMUoM=&vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182
+处理 M3U8 文件
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_0.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=a&verify=1753886090-4U9LSnOMv1zEwY7zwlXWJEZB4HFvGEWsJq5bgck0QEY%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_1.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=b&verify=1753886090-4AlKWyMjYFNE01BSch2z58D11E%2FY6NLY16E4X80pQGo%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_2.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=c&verify=1753886090-YpbRNsGyz3dWH%2B1pVYMiHhbO%2BuFzem28lfnbHlO0hL0%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_3.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=d&verify=1753886090-sRnzEYlkRXJxFa0Yb08ntKDk7BOnlOtQN3ruWeb0QoI%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_381.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=g&verify=1753881717-MRGC%2B4oF39ZbjqhHeuAfu%2BV9pEwReh7Wx%2FaQjsMXH24%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_4.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=e&verify=1753886090-zCL6lX1gdruZ7kYlbSadXzF02Zumd%2ByDlf9NrnLiT5o%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_382.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=h&verify=1753881717-QBbaJWZlNMI%2FFJsBUN%2BJTVRJCw%2BmlsGEW6Fug4RWqxs%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_38.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=n&verify=1753886090-nigTFxjlpXsZcrCTyy5PvnPeHLVfzcQSBEwSkZW3uXU%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_39.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=o&verify=1753886090-BNlK55sWK4009GDXAzOUtUNKYR38IXWnI5UrzWHgdgM%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_40.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=p&verify=1753886090-0vrT%2Bls3Aw7%2F80ZYZutay4Z55YC3uUGb2uuEvw3Y3xo%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_41.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=q&verify=1753886090-OjZnYeAmMiMNXpMaZMTa112vLB4KotYuBAej%2BEFtpFA%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_383.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=i&verify=1753881717-Ex7SkTAkw9btExf2jvcW8ZwGOfwY39DBKx4yiHEDMag%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_42.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=r&verify=1753886090-bgWNvx5gbp26unGVGg7EElKUdnjGnW1Pix%2B1emkz6iU%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_110.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=k&verify=1753886090-L8crxbSrJIsUvrTcJXGxfjnrCTcHPjoDPzOcAWKED3E%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_384.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=j&verify=1753881717-vpmqiIFxbCrlSpm12KPSGdjupmpWBdFc4T4BxZiwrnI%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_111.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=l&verify=1753886090-RJVfnnnu6Dl%2FXhX0wHnTm0fdrrX5s4F0APzoaB7TWxY%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_112.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=m&verify=1753886090-xJkaGEcC4Lc4SQogyPEjsS9LbkvM6GQ32RhiQXuZK3s%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_113.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=n&verify=1753886090-DNYMtJA9qphDKruOAHl9vFryLZidTSkK15GroAoQePk%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_385.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=k&verify=1753881717-RR6tlG6e4QRpQZfzHPXU5PTZbtmQFdFfYhJE07FDops%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_114.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=o&verify=1753886090-sSoxg5voMMEUf06LiiCucd0uVZUfR%2FEctko%2FqhbiSCI%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_386.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=l&verify=1753881717-TNZ5PFiwiQ0Y%2BtledWP%2FA8%2FeG33MfCJWXmmjPeZZGxo%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_115.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=p&verify=1753886090-Liq1m8BbEg5i00n3xl8XxnDgpEqcl7in4K%2Fut%2Fco9VQ%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_387.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=m&verify=1753881717-quAdEMOKscyOxGHmWH0h2XM1jIUKuYwxLF41rnqVLd8%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_116.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=q&verify=1753886090-D33uoLG9F1JSAOCXtAEfqWhWHU9qckOPa6nT%2Fen1gWA%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_388.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=n&verify=1753881717-qOmXycdn%2BewVidO%2BHsehlcKrylUGDEeUzzweAkUhZEA%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_117.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=r&verify=1753886090-oE%2FKzoKlKM5wOxttLZra4JSQhv%2BlI836rnrjZzKnibI%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_389.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=o&verify=1753881717-5jByKl9HOrzHG%2BlXnYX5rxvT4HLg%2BmGPDCdxm0fyl54%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_390.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=p&verify=1753881717-bpSO4w8J4XyipMxFZkOW3eLBTbMAhW0dmpUNVW1oY4Y%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_118.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=s&verify=1753886090-cgv2jH05cqt3o2efXPLHFHeTBsg%2BBI%2B7Hzke8a2Ulg8%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_119.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=t&verify=1753886090-eZtSIin59pLUnvcj9V9HCP46nO4IKgGEEN%2BHkSUddW8%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_391.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=q&verify=1753881717-3%2FKQRQxcQCb7g8KmUwQo2tnCQKvvuC3tVlFdnUHeEkw%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_120.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=u&verify=1753886090-y8Omi7bPAtFfQL4l0hqfIkAU8%2F48FiYKaK4hm7eXrrk%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_392.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=r&verify=1753881717-QL8ragYBASJRsr4rke76FRr50YKC%2FGXoVvyj9QCz3BU%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_121.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=v&verify=1753886090-1efv8zgPdWpkmFf3Ld24rKddQTFfBDIUKdTMstsvbJs%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_393.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=s&verify=1753881717-48qunb67b6S1M5iLwD6IRSCyoujjfPc6zL2G2DlbDIY%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_122.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=w&verify=1753886090-zgYvytOCgfuvEufQnxtG6xz7EKCR539DUgbBdYyybM0%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_394.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=t&verify=1753881717-F8dKadtk8eLux6NC4dtLQUyMz1SbFl4JvLEN6RAhJQs%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_123.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=x&verify=1753886090-B3%2BAroRuSQumoI67pcg8AobbV47jCWMCfDJ0XNbNYpw%3D
+🎬 电影映射: 扫毒3(粤语) -> contxt:s22dEHEyL0V, episodeKey:M1Ez2R9vEQA, 使用:s22dEHEyL0V
+🎬 电影映射: 扫毒3 -> contxt:IRtzQnHYyek, episodeKey:zNHleXTYSZM, 使用:IRtzQnHYyek
+🎬 电影映射: 扫毒 -> contxt:pKzYdud4yzC0, episodeKey:ENwfBKMD40B, 使用:pKzYdud4yzC0
+🎬 电影映射: 扫毒2天地对决(粤语) -> contxt:XSKqWhcUSQB, episodeKey:WyUc19TBJBF, 使用:XSKqWhcUSQB
+🎬 电影映射: 扫毒2天地对决 -> contxt:BFBfBF9SVl2, episodeKey:qt0QdKeQ55D, 使用:BFBfBF9SVl2
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_395.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=u&verify=1753881717-KCifts%2BctHXfuwb6o4%2BeNe7Fmxlnxlq%2Bg7kHCT4VYhw%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_124.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=y&verify=1753886090-qD4YueB%2BLgAL6jC8dEbeTpujWEX6p%2FxK%2FJVR69h6N58%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_396.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=v&verify=1753881717-ZhJy09%2Fg7sb9BglQqMV6DtQ5j9psJJ7NUPFMyf41af0%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_125.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=a&verify=1753886090-Ofkeh%2FIKK5Ggb%2FrrundGEhynIqW%2BSMKh7gYC3%2FgD%2FG4%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_397.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=w&verify=1753881717-coMjCHv8nAZVlVvEwzdCdSxCuFCF7cQC8pQKHDR2FIQ%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_126.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=b&verify=1753886090-LXmLeTSzhPJt22TagxvA2A4MkTeAaoStpYSlZ4wGAdU%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_398.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=x&verify=1753881717-6EBHaL5UpHH5Uwu0lw4v7XgljVqP62V6XxWFa4opJEg%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_127.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=c&verify=1753886090-kip8ZRNIiZ7HmNo3MX8YPtzYy9MPQSmsGqQnFif4RqQ%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_399.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=y&verify=1753881717-NHWCWWeRNFZdD%2BJ15%2Bpng9n2XC%2FzQ%2Bj6%2BrW%2B2ErBfWk%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_128.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=d&verify=1753886090-a%2FkxVhaf7FtVtCpSvBt%2B4gmL%2BchHH0mbAJXe0gcUhc8%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_400.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=a&verify=1753881717-x5AD68kUTo11zDZcuPM%2BmZp%2Fl1ttVoVUe5S8dAVjyUA%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_129.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=e&verify=1753886090-edh%2F20BBHpCD2mTHE4dGwFZRYweGUYWDsbdTHVQkvmU%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_401.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=b&verify=1753881717-COJGqBpJa%2BkB5I4yYk1YA5Tx%2BMC5%2FxcGs%2FXJXBfU6To%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_130.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=f&verify=1753886090-nR98xq%2FORsl4hVhDWbEzHOxxPmjkdaHi80heT6mQm%2Bo%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_402.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=c&verify=1753881717-nL1agfC2iNB%2B5X2ayXcnDzQRXE0F47zGLklaH%2BE0HLw%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_131.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=g&verify=1753886090-UUPFiC1JLNwV%2BiHavIGAmDUpUWeQDRfmuU1J1ANhI6Q%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_403.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=d&verify=1753881717-n4HwAJrhEV59fph1qqlWnZ5gRDYH1S3F9tGtTC83Is0%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_132.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=h&verify=1753886090-tL3nzVeuqWvHuznwXW12lDm4%2Ba0eZy4to9bMGMzZBr8%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_404.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=e&verify=1753881717-suBWzzaTtADhMxpX3gRccoUU6vnLOVfYvQrhNMsgAkQ%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_133.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=i&verify=1753886090-3G0%2Flkmv83uRQXsm7ovhJtzPWVUYMWPjtwK5K56bBAY%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_405.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=f&verify=1753881717-2DQwsQEZQvbVK3dKZiIu2vfpnW%2BZGARH5jA6Z1U8MIA%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_134.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=j&verify=1753886090-IwZ81tvf76zBYH7%2FKPdziESFwejGb8QTUOxzGUSME0I%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_406.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=g&verify=1753881717-zwL8GGmGmSrspXMDtcyuj3LBlPNF7ECHdEP82GpfDh4%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_135.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=k&verify=1753886090-k92ZkB3dWmGKoS7CkKSSg4nqwYaBC%2FplL%2FLEOcISri0%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_407.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=h&verify=1753881717-97jbfPaMBlBg8OYBHFMNLg%2FEytzsG6LMskvSlVqOxWY%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_408.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=i&verify=1753881717-0w8f6AKa7eZYFkHKPOLMyD57OeQnsFms7La%2F1qGa3NA%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_136.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=l&verify=1753886090-QHRLKrZGgtwQFbJydyT1VGMKbDK7AFzFuw%2FrpbmWW2A%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_409.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=j&verify=1753881717-rf3kwmS8p9L5mRw82SOg6s9aKmRX%2B1VTPpq2etnavBo%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_137.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=m&verify=1753886090-ymCT0lLXTZRFbTjX8m668kruY9KlUExwk5bGw%2FsQRQE%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_410.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=k&verify=1753881717-k2Fei7GsRhDlK5FdKCWNVxTf1UP35LrqmeyXyW3x1w0%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_138.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=n&verify=1753886090-kYx4XutUNvITI5qFBL0EdW8p8%2FfwyetwlNVWGxzEXNk%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_411.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=l&verify=1753881717-eIw%2FQt%2FFMLf%2FoYj9eSqcfEsaT6ATPeOYiLn6K73LfCA%3D
+代理请求: https://sss5-e1.pipecdn.vip/ppot/_definst_/mp4:s5/live/lxj-sdfb-01-03A8A4391.mp4/media_139.ts?vCustomParameter=0_23.177.40.49_US_0_0&lb=370348f7e813f9fa173c15da7fceb182&ab=o&verify=1753886090-mTcAlHAk0nt1H28kflnZ6xqkG8E1dQ8ecgogUMj345s%3D
+代理请求: https://sss6-e1.pipecdn.vip/ppot/_definst_/mp4:s6/gvod/fz-sd3yy-576p-020215FA30.mp4/media_412.ts?vCustomParameter=0_23.177.40.49_US_1_0&lb=f185b941afbd9c73f7798f39c37acb59&ab=m&verify=1753881717-1xtdzPcsOjkuZ%2BrMUKJfQW%2FSLdbFYoBF4OXicG2wkxw%3D

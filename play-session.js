@@ -20,15 +20,20 @@ class PlaySessionManager {
     }
 
     // 创建播放会话
-    createPlaySession(playUrl, title, videoId = null) {
-        const playId = this.generatePlayId(playUrl, title);
+    createPlaySession(sessionData) {
+        const { originalUrl, title } = sessionData;
+        if (!originalUrl) {
+            console.error("创建播放会话失败：缺少 originalUrl");
+            return null;
+        }
+
+        const playId = this.generatePlayId(originalUrl, title);
         const expiresAt = Date.now() + this.sessionTimeout;
 
         const session = {
             playId,
-            playUrl,
-            title,
-            videoId,
+            originalUrl: originalUrl,
+            title: title || '未知视频',
             createdAt: Date.now(),
             expiresAt,
             accessCount: 0

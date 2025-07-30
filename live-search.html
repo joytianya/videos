@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时搜索 - YFSP视频播放器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .search-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 20px 60px 20px 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 15px;
+            font-size: 18px;
+            outline: none;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .search-input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #667eea;
+            font-size: 20px;
+        }
+        
+        .search-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .category-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .category-tab {
+            padding: 10px 20px;
+            border: 2px solid #e1e5e9;
+            border-radius: 25px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .category-tab.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .category-tab:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 10px;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .results-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            min-height: 400px;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .video-poster {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .video-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .video-poster .placeholder {
+            font-size: 48px;
+            color: #ccc;
+        }
+        
+        .video-type-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .video-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        
+        .episodes-container {
+            margin-top: 15px;
+            max-height: 150px;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 8px;
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        .episode-button,
+        .expand-episodes-button {
+            padding: 8px;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 13px;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+        
+        .episode-button:hover,
+        .expand-episodes-button:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .video-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .video-stats {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #888;
+        }
+        
+        .video-stats span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .play-button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .play-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        
+        .no-results-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        
+        .pagination button {
+            padding: 10px 15px;
+            border: 2px solid #e1e5e9;
+            background: white;
+            color: #666;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .pagination button:hover:not(:disabled) {
+            border-color: #667eea;
+            color: #667eea;
+        }
+        
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .pagination .current-page {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .error-message {
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        /* 剧集弹窗样式 */
+        
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            transform: scale(0.9);
+            transition: all 0.3s ease;
+        }
+        
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+        
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .modal-close {
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #888;
+        }
+        
+        .modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        
+        .episode-button {
+            padding: 10px;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        
+        .episode-button:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .search-container,
+            .results-container {
+                padding: 20px;
+            }
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            .category-tabs {
+                justify-content: center;
+            }
+            .search-stats {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎬 实时搜索</h1>
+            <p>输入关键词，实时搜索海量视频资源</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="搜索电影、电视剧、综艺..." id="searchInput">
+                <div class="search-icon">🔍</div>
+            </div>
+
+            <div class="category-tabs">
+                <div class="category-tab active" data-category="all">全部</div>
+                <div class="category-tab" data-category="movie">电影</div>
+                <div class="category-tab" data-category="tv">电视剧</div>
+                <div class="category-tab" data-category="variety">综艺</div>
+            </div>
+
+            <div class="search-stats">
+                <div id="searchStats">输入关键词开始搜索</div>
+                <div id="searchTime"></div>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <div id="loadingIndicator" class="loading" style="display: none;">
+                <div class="loading-spinner"></div>
+                <div>正在搜索中...</div>
+            </div>
+
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <div id="resultsGrid" class="results-grid"></div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>没有找到相关结果</h3>
+                <p>请尝试使用其他关键词搜索</p>
+            </div>
+
+            <div id="pagination" class="pagination" style="display: none;"></div>
+        </div>
+
+    </div>
+
+    <script>
+        class LiveSearch {
+            constructor() {
+                this.searchInput = document.getElementById('searchInput');
+                this.resultsGrid = document.getElementById('resultsGrid');
+                this.loadingIndicator = document.getElementById('loadingIndicator');
+                this.errorMessage = document.getElementById('errorMessage');
+                this.noResults = document.getElementById('noResults');
+                this.searchStats = document.getElementById('searchStats');
+                this.searchTime = document.getElementById('searchTime');
+                this.pagination = document.getElementById('pagination');
+
+                this.currentQuery = '';
+                this.currentCategory = 'all';
+                this.currentPage = 1;
+                this.searchTimeout = null;
+                this.isSearching = false;
+
+                this.initEventListeners();
+            }
+
+            initEventListeners() {
+                // 搜索输入框事件
+                this.searchInput.addEventListener('input', (e) => {
+                    this.handleSearchInput(e.target.value);
+                });
+
+                // 分类标签事件
+                document.querySelectorAll('.category-tab').forEach(tab => {
+                    tab.addEventListener('click', (e) => {
+                        this.handleCategoryChange(e.target.dataset.category);
+                    });
+                });
+
+                // 回车搜索
+                this.searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        this.performSearch(this.searchInput.value.trim());
+                    }
+                });
+            }
+
+            handleSearchInput(query) {
+                // 清除之前的定时器
+                if (this.searchTimeout) {
+                    clearTimeout(this.searchTimeout);
+                }
+
+                // 如果查询为空，清空结果
+                if (!query.trim()) {
+                    this.clearResults();
+                    this.searchStats.textContent = '输入关键词开始搜索';
+                    this.searchTime.textContent = '';
+                    return;
+                }
+
+                // 设置新的定时器，实现防抖
+                this.searchTimeout = setTimeout(() => {
+                    this.performSearch(query.trim());
+                }, 500);
+            }
+
+            handleCategoryChange(category) {
+                // 更新活跃标签
+                document.querySelectorAll('.category-tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                document.querySelector(`[data-category="${category}"]`).classList.add('active');
+
+                this.currentCategory = category;
+                this.currentPage = 1;
+
+                // 如果有搜索内容，重新搜索
+                if (this.currentQuery) {
+                    this.performSearch(this.currentQuery);
+                }
+            }
+
+            async performSearch(query, page = 1) {
+                if (this.isSearching) return;
+
+                this.currentQuery = query;
+                this.currentPage = page;
+                this.isSearching = true;
+
+                this.showLoading();
+                this.hideError();
+
+                const startTime = Date.now();
+
+                try {
+                    const response = await fetch('/live-search', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            query: query,
+                            category: this.currentCategory,
+                            page: page
+                        })
+                    });
+
+                    const data = await response.json();
+                    const searchTime = Date.now() - startTime;
+
+                    if (data.success) {
+                        this.displayResults(data.results, data.totalCount, searchTime);
+                        this.updatePagination(data.pagination);
+                    } else {
+                        this.showError(data.error || '搜索失败');
+                    }
+
+                } catch (error) {
+                    console.error('搜索错误:', error);
+                    this.showError('网络错误，请稍后重试');
+                } finally {
+                    this.hideLoading();
+                    this.isSearching = false;
+                }
+            }
+
+            displayResults(results, totalCount, searchTime) {
+                this.resultsGrid.innerHTML = '';
+
+                if (!results || results.length === 0) {
+                    this.showNoResults();
+                    return;
+                }
+
+                this.hideNoResults();
+
+                // 更新搜索统计
+                this.searchStats.textContent = `找到 ${totalCount} 个相关结果`;
+                this.searchTime.textContent = `搜索耗时 ${searchTime}ms`;
+
+                // 创建视频卡片
+                results.forEach(video => {
+                    const card = this.createVideoCard(video);
+                    this.resultsGrid.appendChild(card);
+                });
+            }
+
+            createVideoCard(video) {
+                    const card = document.createElement('div');
+                    card.className = 'video-card';
+
+                    const posterUrl = video.highResImgPath || video.imgPath || '';
+                    const title = video.title || '未知标题';
+
+                    const isSeries = video.atypeName !== '电影';
+
+                    card.innerHTML = `
+                        <div class="video-poster">
+                            ${posterUrl ? `<img src="${posterUrl}" alt="${title}" onerror="this.onerror=null;this.src='${video.imgPath}'">` : ''}
+                            <div class="placeholder" ${posterUrl ? 'style="display:none"' : ''}>🎬</div>
+                            <div class="video-type-badge">${video.atypeName}</div>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-title" title="${title}">${title}</div>
+                            <div class="video-meta">
+                                <span>${video.regional} ${video.year}</span>
+                                <span>⭐ ${video.score}</span>
+                            </div>
+                            <div class="video-sub-info">
+                                <p><strong>主演:</strong> ${video.starring || '暂无'}</p>
+                            </div>
+                            <div class="video-stats">
+                                <span>🔥 ${this.formatNumber(video.hot)}</span>
+                                <span>💬 ${video.comments}</span>
+                            </div>
+                            <div class="card-actions">
+                                ${isSeries ? `
+                                    <button class="expand-episodes-button" onclick="liveSearch.toggleEpisodes(this, '${video.seriesId}', '${title.replace(/'/g, "\\'")}')">
+                                        ⚡ 展开剧集
+                                    </button>
+                                ` : `
+                                    <button class="play-button" onclick="liveSearch.playVideo('${video.key}', '${title.replace(/'/g, "\\'")}', '${video.seriesId}', 'play', '')">
+                                        ▶️ 立即播放
+                                    </button>
+                                `}
+                            </div>
+                            <div class="episodes-container" style="display: none;"></div>
+                        </div>
+                    `;
+                    return card;
+                }
+            
+            async toggleEpisodes(button, seriesId, title) {
+                const container = button.parentElement.nextElementSibling;
+                const isVisible = container.style.display !== 'none';
+
+                if (isVisible) {
+                    container.style.display = 'none';
+                    button.innerHTML = '⚡ 展开剧集';
+                } else {
+                    button.innerHTML = '...';
+                    button.disabled = true;
+
+                    // 检查是否已加载
+                    if (container.children.length === 0) {
+                        try {
+                            const response = await fetch('/get-episodes', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ seriesId: seriesId })
+                            });
+                            const data = await response.json();
+                            if (data.success && data.episodes.length > 0) {
+                                container.innerHTML = data.episodes.map(ep => `
+                                    <button class="episode-button" onclick="liveSearch.playVideo('${ep.key}', '${title.replace(/'/g, "\\'")}', '${seriesId}', 'watch', '${ep.title}')">
+                                        ${ep.title}
+                                    </button>
+                                `).join('');
+                            } else {
+                                container.innerHTML = `<p style="grid-column: 1 / -1;">未能加载剧集列表。</p>`;
+                            }
+                        } catch (error) {
+                             container.innerHTML = `<p style="grid-column: 1 / -1;">网络错误，请重试。</p>`;
+                        }
+                    }
+                    
+                    container.style.display = 'grid';
+                    button.innerHTML = '收起剧集';
+                    button.disabled = false;
+                }
+            }
+
+            async playVideo(episodeKey, seriesTitle, seriesId, playType, episodeTitle = '') {
+                if (!episodeKey) {
+                    alert('视频链接无效');
+                    return;
+                }
+
+                const isMovie = playType === 'play';
+                const playUrl = isMovie 
+                    ? `https://www.yfsp.tv/play/${episodeKey}`
+                    : `https://www.yfsp.tv/play/${seriesId}?id=${episodeKey}`;
+                
+                const finalTitle = isMovie ? seriesTitle : `${seriesTitle} - ${episodeTitle}`;
+
+                try {
+                    // 创建播放会话
+                    const response = await fetch('/create-play-session', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            originalUrl: playUrl,
+                            title: finalTitle,
+                        }),
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('创建播放会话失败');
+                    }
+
+                    const data = await response.json();
+                    if (data.success) {
+                        window.open(data.playerUrl, '_blank');
+                    } else {
+                        throw new Error(data.error || '创建播放会话失败');
+                    }
+
+                } catch (error) {
+                    console.error('播放错误:', error);
+                    alert('播放失败: ' + error.message);
+                }
+            }
+
+            updatePagination(pagination) {
+                if (!pagination || pagination.totalPages <= 1) {
+                    this.pagination.style.display = 'none';
+                    return;
+                }
+
+                this.pagination.style.display = 'flex';
+                this.pagination.innerHTML = '';
+
+                const { currentPage, totalPages } = pagination;
+
+                // 上一页按钮
+                const prevBtn = document.createElement('button');
+                prevBtn.textContent = '← 上一页';
+                prevBtn.disabled = currentPage <= 1;
+                prevBtn.onclick = () => this.performSearch(this.currentQuery, currentPage - 1);
+                this.pagination.appendChild(prevBtn);
+
+                // 页码显示
+                const pageInfo = document.createElement('span');
+                pageInfo.textContent = `第 ${currentPage} 页，共 ${totalPages} 页`;
+                pageInfo.style.margin = '0 20px';
+                pageInfo.style.color = '#666';
+                this.pagination.appendChild(pageInfo);
+
+                // 下一页按钮
+                const nextBtn = document.createElement('button');
+                nextBtn.textContent = '下一页 →';
+                nextBtn.disabled = currentPage >= totalPages;
+                nextBtn.onclick = () => this.performSearch(this.currentQuery, currentPage + 1);
+                this.pagination.appendChild(nextBtn);
+            }
+
+            showLoading() {
+                this.loadingIndicator.style.display = 'block';
+                this.resultsGrid.style.display = 'none';
+                this.noResults.style.display = 'none';
+                this.pagination.style.display = 'none';
+            }
+
+            hideLoading() {
+                this.loadingIndicator.style.display = 'none';
+                this.resultsGrid.style.display = 'grid';
+            }
+
+            showError(message) {
+                this.errorMessage.textContent = message;
+                this.errorMessage.style.display = 'block';
+            }
+
+            hideError() {
+                this.errorMessage.style.display = 'none';
+            }
+
+            showNoResults() {
+                this.noResults.style.display = 'block';
+                this.resultsGrid.style.display = 'none';
+                this.pagination.style.display = 'none';
+            }
+
+            hideNoResults() {
+                this.noResults.style.display = 'none';
+            }
+
+            clearResults() {
+                this.resultsGrid.innerHTML = '';
+                this.hideNoResults();
+                this.hideError();
+                this.pagination.style.display = 'none';
+            }
+
+            formatNumber(num) {
+                if (num >= 10000) {
+                    return (num / 10000).toFixed(1) + 'w';
+                }
+                return num.toString();
+            }
+        }
+
+        // 初始化搜索实例
+        const liveSearch = new LiveSearch();
+
+        // 页面加载完成后自动聚焦搜索框
+        window.addEventListener('load', () => {
+            document.getElementById('searchInput').focus();
+        });
+    </script>
+</body>
+
+</html>
