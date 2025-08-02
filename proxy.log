@@ -1,0 +1,18 @@
+启动代理服务器...
+目标网站: https://www.olevod.tv
+ * Serving Flask app 'main'
+ * Debug mode: off
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8888
+ * Running on http://172.24.4.46:8888
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:__main__:代理请求: GET https://www.olevod.tv/details-4-9648.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:开始HTML内容过滤，原始长度: 7019 字符
+INFO:__main__:发现广告内容 - pc-ads: 0, gif: 0, static.olelive: 0
+INFO:__main__:注入广告拦截JavaScript代码
+INFO:__main__:HTML过滤完成: 7019 -> 16120 字符 (减少 -9101)
+INFO:__main__:内容过滤: 7019 -> 16120 字符
+INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 11:02:17] "GET /details-4-9648.html HTTP/1.1" 200 -
