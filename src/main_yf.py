@@ -17,8 +17,8 @@ CORS(app)  # 允许跨域请求
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# 目标网站配置
-TARGET_DOMAIN = 'yfsp.tv'
+# 目标网站配置 - 更新为官方新域名
+TARGET_DOMAIN = 'www.iyf.tv'
 TARGET_SCHEME = 'https'
 TARGET_BASE_URL = f'{TARGET_SCHEME}://{TARGET_DOMAIN}'
 
