@@ -81,23 +81,25 @@ def replace_domain_in_content(content, content_type):
             # 快速检查是否需要过滤
             needs_filtering = any(keyword in content for keyword in [
                 'pc-ads', 'static.olelive.com/uploads/file/', '2032.sfdzxvcbdfhg2032.cc',
-                'tjh121e721.xn--9kqv5am2jbz1a.com'
+                'tjh121e721.xn--9kqv5am2jbz1a.com', 'swiper-slide'
             ])
             
             if needs_filtering:
                 logger.info(f"开始HTML内容过滤，原始长度: {len(content)} 字符")
                 
-                # 合并所有广告移除操作为一次正则替换
-                # 使用编译后的正则表达式提高性能
+                # 更强的服务器端广告过滤，包含您提到的swiper-slide广告
                 ad_patterns = [
-                    # 最完整的pc-ads容器（优先匹配）
+                    # 您提到的具体swiper-slide广告模式（最优先匹配）
+                    r'<div[^>]*class="[^"]*swiper-slide[^"]*csp[^"]*"[^>]*data-swiper-autoplay="[^"]*"[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?<div[^>]*class="[^"]*pc-mask[^"]*swiper-mask-circle[^"]*"[^>]*></div>\s*</div>',
+                    # 通用swiper-slide广告容器
+                    r'<div[^>]*class="[^"]*swiper-slide[^"]*"[^>]*data-swiper-autoplay="[^"]*"[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>',
+                    r'<div[^>]*class="[^"]*swiper-slide[^"]*"[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>',
+                    # 最完整的pc-ads容器
                     r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?<a[^>]*href="[^"]*tjh121e721\.xn--9kqv5am2jbz1a\.com[^"]*"[^>]*>.*?</a>\s*</div>',
                     r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?<a[^>]*href="[^"]*2032\.sfdzxvcbdfhg2032\.cc[^"]*"[^>]*>.*?</a>\s*</div>',
                     # 通用pc-ads容器
                     r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?</div>',
                     r'<div[^>]*class="[^"]*pc-ads[^"]*"[^>]*>.*?</div>',
-                    # swiper-slide广告容器
-                    r'<div[^>]*class="[^"]*swiper-slide[^"]*"[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>',
                     # 单独的广告链接
                     r'<a[^>]*href="[^"]*tjh121e721\.xn--9kqv5am2jbz1a\.com[^"]*"[^>]*>.*?</a>',
                     r'<a[^>]*href="[^"]*2032\.sfdzxvcbdfhg2032\.cc[^"]*"[^>]*>.*?</a>',
@@ -116,11 +118,11 @@ def replace_domain_in_content(content, content_type):
                 if len(content) != original_len:
                     logger.info(f"HTML过滤完成: {original_len} -> {len(content)} 字符 (减少 {original_len - len(content)})")
             
-            # 注入精简版的广告拦截JavaScript代码
+            # 注入强化版的广告拦截JavaScript代码 - 在页面渲染前执行
             ad_blocker_js = '''
 <script type="text/javascript">
 (function() {
-    // 精简版广告拦截代码
+    // 立即执行的广告拦截代码 - 在DOM构建期间就开始工作
     const adPaths = ['static.olelive.com/uploads/file/', '2032.sfdzxvcbdfhg2032.cc', 'tjh121e721.xn--9kqv5am2jbz1a.com'];
     
     // 拦截网络请求
@@ -133,13 +135,55 @@ def replace_domain_in_content(content, content_type):
         return originalFetch.apply(this, args);
     };
     
-    // DOM清理函数
+    // 拦截XMLHttpRequest
+    const originalXHROpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function(method, url, ...args) {
+        if (typeof url === 'string' && adPaths.some(path => url.includes(path))) {
+            // 重定向到空响应
+            url = 'data:text/plain;base64,';
+        }
+        return originalXHROpen.call(this, method, url, ...args);
+    };
+    
+    // 添加CSS规则立即隐藏广告元素
+    const style = document.createElement('style');
+    style.textContent = `
+        /* 立即隐藏广告相关元素 */
+        [class*="pc-ads"],
+        .swiper-slide:has(img[src*="static.olelive.com/uploads/file/"]),
+        .swiper-slide img[src*="static.olelive.com/uploads/file/"],
+        a[href*="2032.sfdzxvcbdfhg2032.cc"],
+        a[href*="tjh121e721.xn--9kqv5am2jbz1a.com"],
+        img[src*="static.olelive.com/uploads/file/"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            width: 0 !important;
+            height: 0 !important;
+            position: absolute !important;
+            left: -9999px !important;
+        }
+        
+        /* 特别针对swiper轮播广告 */
+        .swiper-slide[data-swiper-autoplay]:has(img[src*="static.olelive.com/uploads/file/"]) {
+            display: none !important;
+        }
+        
+        /* 隐藏包含广告图片的swiper容器 */
+        .swiper-container:has(.swiper-slide img[src*="static.olelive.com/uploads/file/"]) .swiper-slide:has(img[src*="static.olelive.com/uploads/file/"]) {
+            display: none !important;
+        }
+    `;
+    (document.head || document.documentElement).appendChild(style);
+    
+    // DOM清理函数 - 更激进的清理
     function cleanAds() {
         // 白名单：不要删除这些重要元素
         const protectedSelectors = [
             'input', 'button', 'form', 'nav', 'header', 'footer', 
             '[class*="search"]', '[id*="search"]', '[class*="menu"]',
-            '[class*="nav"]', '[class*="header"]', '[class*="footer"]'
+            '[class*="nav"]', '[class*="header"]', '[class*="footer"]',
+            '[class*="player"]', '[class*="video"]'
         ];
         
         // 检查元素是否应该被保护
@@ -153,26 +197,29 @@ def replace_domain_in_content(content, content_type):
             });
         }
         
-        // 清理pc-ads（只清理明确的广告容器）
+        // 清理pc-ads
         document.querySelectorAll('[class*="pc-ads"]').forEach(el => {
-            if (!isProtected(el) && el.className.includes('pc-ads')) {
+            if (!isProtected(el)) {
                 el.remove();
             }
         });
         
-        // 清理包含uploads/file的图片（只删除图片和swiper容器）
-        document.querySelectorAll('img[src*="static.olelive.com/uploads/file/"]').forEach(img => {
-            if (!isProtected(img)) {
-                const swiperParent = img.closest('.swiper-slide');
-                if (swiperParent && !isProtected(swiperParent)) {
-                    swiperParent.remove();
-                } else {
-                    img.remove();
-                }
+        // 清理包含uploads/file的swiper-slide（您提到的具体问题）
+        document.querySelectorAll('.swiper-slide').forEach(slide => {
+            const adImg = slide.querySelector('img[src*="static.olelive.com/uploads/file/"]');
+            if (adImg && !isProtected(slide)) {
+                slide.remove();
             }
         });
         
-        // 清理2032链接和新的广告域名链接（只删除链接本身）
+        // 清理单独的广告图片
+        document.querySelectorAll('img[src*="static.olelive.com/uploads/file/"]').forEach(img => {
+            if (!isProtected(img)) {
+                img.remove();
+            }
+        });
+        
+        // 清理广告链接
         document.querySelectorAll('a[href*="2032.sfdzxvcbdfhg2032.cc"], a[href*="tjh121e721.xn--9kqv5am2jbz1a.com"]').forEach(link => {
             if (!isProtected(link)) {
                 link.remove();
@@ -180,17 +227,36 @@ def replace_domain_in_content(content, content_type):
         });
     }
     
-    // 监听DOM变化
+    // 立即执行一次清理
+    cleanAds();
+    
+    // 监听DOM变化 - 实时拦截新增的广告元素
     const observer = new MutationObserver(mutations => {
         mutations.forEach(mutation => {
             mutation.addedNodes.forEach(node => {
                 if (node.nodeType === 1) {
-                    // 检查新增节点
+                    // 立即检查并移除广告元素
                     if (node.matches && (
                         node.matches('[class*="pc-ads"]') ||
-                        node.matches('.swiper-slide') && node.querySelector('img[src*="static.olelive.com/uploads/file/"]')
+                        (node.matches('.swiper-slide') && node.querySelector('img[src*="static.olelive.com/uploads/file/"]')) ||
+                        node.matches('img[src*="static.olelive.com/uploads/file/"]') ||
+                        node.matches('a[href*="2032.sfdzxvcbdfhg2032.cc"]') ||
+                        node.matches('a[href*="tjh121e721.xn--9kqv5am2jbz1a.com"]')
                     )) {
                         node.remove();
+                        return;
+                    }
+                    
+                    // 检查子元素中是否有广告
+                    if (node.querySelector) {
+                        const adElements = node.querySelectorAll(`
+                            [class*="pc-ads"],
+                            .swiper-slide:has(img[src*="static.olelive.com/uploads/file/"]),
+                            img[src*="static.olelive.com/uploads/file/"],
+                            a[href*="2032.sfdzxvcbdfhg2032.cc"],
+                            a[href*="tjh121e721.xn--9kqv5am2jbz1a.com"]
+                        `);
+                        adElements.forEach(adEl => adEl.remove());
                     }
                 }
             });
@@ -198,23 +264,48 @@ def replace_domain_in_content(content, content_type):
     });
     
     // 启动监听
-    observer.observe(document.body || document.documentElement, {childList: true, subtree: true});
-    
-    // 定时清理（优化版 - 减少频率）
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(cleanAds, 1000); // 页面加载1秒后清理一次
-        });
+    if (document.body) {
+        observer.observe(document.body, {childList: true, subtree: true});
     } else {
-        setTimeout(cleanAds, 500); // 如果页面已加载，0.5秒后清理一次
+        // 如果body还没有创建，等待它创建
+        const bodyObserver = new MutationObserver(() => {
+            if (document.body) {
+                observer.observe(document.body, {childList: true, subtree: true});
+                bodyObserver.disconnect();
+                cleanAds(); // body创建后立即清理一次
+            }
+        });
+        bodyObserver.observe(document.documentElement, {childList: true});
+    }
+    
+    // 多个时间点的清理，确保覆盖所有可能的加载时机
+    setTimeout(cleanAds, 0);      // 立即
+    setTimeout(cleanAds, 100);    // 100ms后
+    setTimeout(cleanAds, 500);    // 500ms后
+    setTimeout(cleanAds, 1000);   // 1秒后
+    setTimeout(cleanAds, 2000);   // 2秒后（处理延迟加载的广告）
+    
+    // DOM加载完成后的清理
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', cleanAds);
+    }
+    
+    // 页面完全加载后的清理
+    if (document.readyState !== 'complete') {
+        window.addEventListener('load', cleanAds);
     }
 })();
 </script>
 '''
             
-            # 在</head>标签前插入广告拦截JS
-            if '</head>' in content:
+            # 在<head>标签开始后立即插入（确保最早执行）
+            if '<head>' in content:
+                content = content.replace('<head>', '<head>' + ad_blocker_js)
+            elif '</head>' in content:
                 content = content.replace('</head>', ad_blocker_js + '</head>')
+            else:
+                # 如果没有head标签，在html开始后插入
+                content = content.replace('<html', ad_blocker_js + '<html', 1)
                 
         except Exception as e:
             logger.warning(f"HTML广告过滤失败: {e}")
