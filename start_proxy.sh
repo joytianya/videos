@@ -8,8 +8,23 @@
 shopt -s expand_aliases
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PID_FILE="$SCRIPT_DIR/proxy.pid"
-LOG_FILE="$SCRIPT_DIR/proxy.log"
+
+# 解析参数，支持指定Python文件后缀
+SUFFIX=""
+COMMAND="${1:-start}"
+
+# 如果第二个参数存在，作为后缀
+if [[ "$2" != "" ]]; then
+    SUFFIX="_$2"
+# 如果第一个参数不是有效命令，但也不是帮助命令，则作为后缀，命令默认为start
+elif [[ ! "$1" =~ ^(start|stop|restart|status|logs|help|-h|--help)$ ]] && [[ "$1" != "" ]]; then
+    SUFFIX="_$1"
+    COMMAND="start"
+fi
+
+PID_FILE="$SCRIPT_DIR/proxy${SUFFIX}.pid"
+LOG_FILE="$SCRIPT_DIR/proxy${SUFFIX}.log"
+PYTHON_FILE="src/main${SUFFIX}.py"
 PORT=8888
 
 # 加载bashrc以获取别名定义
@@ -74,10 +89,19 @@ stop_existing() {
 # 启动服务
 start_service() {
     cd "$SCRIPT_DIR"
-    echo -e "${YELLOW}🌟 启动代理服务器...${NC}"
+    
+    # 检查Python文件是否存在
+    if [ ! -f "$PYTHON_FILE" ]; then
+        echo -e "${RED}❌ 错误：未找到Python文件 $PYTHON_FILE${NC}"
+        echo -e "${YELLOW}💡 可用的Python文件：${NC}"
+        ls src/main*.py 2>/dev/null || echo "   无可用文件"
+        exit 1
+    fi
+    
+    echo -e "${YELLOW}🌟 启动代理服务器 (使用: $PYTHON_FILE)...${NC}"
     
     # 后台启动服务并记录PID
-    nohup python src/main.py > "$LOG_FILE" 2>&1 &
+    nohup python "$PYTHON_FILE" > "$LOG_FILE" 2>&1 &
     PID=$!
     echo $PID > "$PID_FILE"
     
@@ -88,6 +112,7 @@ start_service() {
     if ps -p $PID > /dev/null 2>&1; then
         echo -e "${GREEN}✅ 代理服务器启动成功！${NC}"
         echo "========================================"
+        echo -e "${GREEN}📍 Python文件：${NC}$PYTHON_FILE"
         echo -e "${GREEN}📍 服务地址：${NC}http://localhost:$PORT"
         echo -e "${GREEN}📍 健康检查：${NC}http://localhost:$PORT/health"
         echo -e "${GREEN}📍 进程ID：${NC}$PID"
@@ -178,7 +203,7 @@ show_logs() {
 }
 
 # 主逻辑
-case "${1:-start}" in
+case "$COMMAND" in
     "start")
         check_python
         check_dependencies
@@ -202,7 +227,7 @@ case "${1:-start}" in
         show_logs
         ;;
     *)
-        echo "使用方法: $0 {start|stop|restart|status|logs}"
+        echo "使用方法: $0 {start|stop|restart|status|logs} [后缀]"
         echo ""
         echo "命令说明:"
         echo "  start   - 启动代理服务器 (默认)"
@@ -210,6 +235,20 @@ case "${1:-start}" in
         echo "  restart - 重启代理服务器"
         echo "  status  - 查看服务状态"
         echo "  logs    - 查看日志"
+        echo ""
+        echo "后缀参数:"
+        echo "  无后缀  - 使用 src/main.py"
+        echo "  ol      - 使用 src/main_ol.py"
+        echo "  其他    - 使用 src/main_[后缀].py"
+        echo ""
+        echo "使用示例:"
+        echo "  $0 start     # 启动 main.py"
+        echo "  $0 start ol  # 启动 main_ol.py"
+        echo "  $0 restart ol # 重启 main_ol.py"
+        echo "  $0 stop ol   # 停止 main_ol.py"
+        echo ""
+        echo -e "${YELLOW}💡 可用的Python文件：${NC}"
+        ls src/main*.py 2>/dev/null || echo "   无可用文件"
         exit 1
         ;;
 esac
