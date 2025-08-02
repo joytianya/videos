@@ -309,8 +309,26 @@ def replace_domain_in_content(content, content_type):
         mutations.forEach(function(mutation) {
             mutation.addedNodes.forEach(function(node) {
                 if (node.nodeType === 1) { // Element node
-                    // 专门检测pc-ads广告容器
+                    // 检查是否是swiper-slide容器
                     if (node.className && typeof node.className === 'string') {
+                        if (node.className.includes('swiper-slide')) {
+                            // 检查是否包含uploads/file图片
+                            const hasUploadsFile = node.innerHTML && node.innerHTML.includes('static.olelive.com/uploads/file/');
+                            if (hasUploadsFile) {
+                                console.log('移除包含uploads/file的swiper-slide容器:', node);
+                                node.remove();
+                                return;
+                            }
+                            // 也检查子元素
+                            const uploadsImg = node.querySelector && node.querySelector('img[src*="static.olelive.com/uploads/file/"]');
+                            if (uploadsImg) {
+                                console.log('移除包含uploads/file图片的swiper-slide:', node);
+                                node.remove();
+                                return;
+                            }
+                        }
+                        
+                        // 专门检测pc-ads广告容器
                         if (node.className.includes('pc-content') && node.className.includes('pc-ads')) {
                             console.log('移除pc-ads广告容器:', node);
                             node.remove();
@@ -393,9 +411,8 @@ def replace_domain_in_content(content, content_type):
         subtree: true
     });
     
-    // 页面加载完成后清理一次
-    document.addEventListener('DOMContentLoaded', function() {
-        setTimeout(function() {
+    // 定期清理函数
+    function cleanAds() {
             // 清理pc-ads广告容器
             const adContainers = document.querySelectorAll('.pc-content.pc-ads');
             adContainers.forEach(function(container) {
@@ -476,8 +493,37 @@ def replace_domain_in_content(content, content_type):
                     parent = parent.parentElement;
                 }
             });
-        }, 1000);
+    }
+    
+    // 页面加载完成后清理
+    document.addEventListener('DOMContentLoaded', function() {
+        // 立即清理一次
+        cleanAds();
+        
+        // 1秒后再清理一次
+        setTimeout(cleanAds, 1000);
+        
+        // 2秒后再清理一次
+        setTimeout(cleanAds, 2000);
+        
+        // 然后每3秒清理一次，持续30秒
+        let cleanCount = 0;
+        const cleanInterval = setInterval(function() {
+            cleanAds();
+            cleanCount++;
+            console.log('定期清理广告，第' + cleanCount + '次');
+            if (cleanCount >= 10) {
+                clearInterval(cleanInterval);
+                console.log('停止定期清理');
+            }
+        }, 3000);
     });
+    
+    // 如果DOMContentLoaded已经触发，立即开始清理
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+        cleanAds();
+        setTimeout(cleanAds, 1000);
+    }
 })();
 </script>
 '''
