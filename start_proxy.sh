@@ -8,7 +8,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PID_FILE="$SCRIPT_DIR/proxy.pid"
 LOG_FILE="$SCRIPT_DIR/proxy.log"
 PORT=8888
-
+proxy-on
 # 颜色输出
 RED='\033[0;31m'
 GREEN='\033[0;32m'

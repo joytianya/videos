@@ -106,8 +106,21 @@ def replace_domain_in_content(content, content_type):
             before_len = len(content)
             
             # 移除完整的pc-ads广告div结构，包括所有嵌套内容
-            ad_container_pattern = r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?</div>\s*</a>\s*</div>'
-            content = re.sub(ad_container_pattern, '', content, flags=re.IGNORECASE | re.DOTALL)
+            # 模式1：标准的pc-ads容器
+            ad_container_pattern1 = r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?</div>\s*</a>\s*</div>'
+            content = re.sub(ad_container_pattern1, '', content, flags=re.IGNORECASE | re.DOTALL)
+            
+            # 模式2：更精确的匹配，包含2032域名
+            ad_container_pattern2 = r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?<a[^>]*href="[^"]*2032\.sfdzxvcbdfhg2032\.cc[^"]*"[^>]*>.*?</a>\s*</div>'
+            content = re.sub(ad_container_pattern2, '', content, flags=re.IGNORECASE | re.DOTALL)
+            
+            # 模式3：匹配包含uploads/file图片的pc-ads容器
+            ad_container_pattern3 = r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>'
+            content = re.sub(ad_container_pattern3, '', content, flags=re.IGNORECASE | re.DOTALL)
+            
+            # 模式4：简化匹配，只要包含pc-ads类的div
+            ad_container_pattern4 = r'<div[^>]*class="[^"]*pc-ads[^"]*"[^>]*>.*?</div>'
+            content = re.sub(ad_container_pattern4, '', content, flags=re.IGNORECASE | re.DOTALL)
             
             if len(content) != before_len:
                 logger.info(f"移除pc-ads广告容器: {before_len} -> {len(content)} 字符")
@@ -151,58 +164,70 @@ def replace_domain_in_content(content, content_type):
             
             # 清理包含uploads/file图片的swiper-slide容器（处理嵌套div）
             before_swiper = len(content)
-            # 使用更精确的匹配，处理嵌套的div结构
+            
+            # 方法1：简化的swiper-slide清理
             content = re.sub(
-                r'<div[^>]*class="[^"]*swiper-slide[^"]*"[^>]*>(?:[^<]|<(?!/div>))*<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>(?:[^<]|<(?!/div>))*(?:<div[^>]*>(?:[^<]|<(?!/div>))*</div>)*</div>',
+                r'<div[^>]*class="[^"]*swiper-slide[^"]*"[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>',
                 '',
                 content,
                 flags=re.IGNORECASE | re.DOTALL
             )
             
-            # 如果上面的复杂匹配没有成功，使用简单的方法
-            if len(content) == before_swiper:
-                # 查找并移除包含uploads/file图片的完整div块
+            # 方法2：更宽松的匹配，任何包含swiper-slide和uploads/file的div
+            content = re.sub(
+                r'<div[^>]*swiper-slide[^>]*>.*?static\.olelive\.com\/uploads\/file\/.*?</div>',
+                '',
+                content,
+                flags=re.IGNORECASE | re.DOTALL
+            )
+            
+            # 方法3：最通用的匹配，任何包含uploads/file的div（小心使用）
+            content = re.sub(
+                r'<div[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>',
+                '',
+                content,
+                flags=re.IGNORECASE | re.DOTALL
+            )
+            
+            # 额外的强力清理：使用更简单的字符串替换
+            if 'static.olelive.com/uploads/file/' in content:
+                # 直接查找并移除包含uploads/file的完整行或块
                 lines = content.split('\n')
                 filtered_lines = []
-                skip_until_div_close = False
-                div_depth = 0
-                
-                for line in lines:
-                    if not skip_until_div_close:
-                        # 检查是否包含uploads/file图片
-                        if 'static.olelive.com/uploads/file/' in line and '<img' in line:
-                            # 找到包含该图片的行，需要找到其完整的div容器
-                            # 向前查找div开始标签
-                            temp_lines = filtered_lines[:]
-                            found_div_start = False
-                            for i in range(len(temp_lines) - 1, -1, -1):
-                                if '<div' in temp_lines[i] and ('swiper-slide' in temp_lines[i] or 'csp' in temp_lines[i]):
-                                    # 找到了div开始，从这里开始删除
-                                    filtered_lines = temp_lines[:i]
-                                    skip_until_div_close = True
-                                    div_depth = 1
-                                    found_div_start = True
+                i = 0
+                while i < len(lines):
+                    line = lines[i]
+                    if 'static.olelive.com/uploads/file/' in line:
+                        # 找到包含uploads/file的行，向前查找div开始
+                        start_idx = i
+                        # 向前查找div开始标签
+                        for j in range(i-1, -1, -1):
+                            if '<div' in lines[j] and ('swiper-slide' in lines[j] or 'csp' in lines[j] or 'class=' in lines[j]):
+                                start_idx = j
+                                break
+                        
+                        # 向后查找div结束标签
+                        end_idx = i
+                        div_count = 0
+                        for j in range(start_idx, len(lines)):
+                            if '<div' in lines[j]:
+                                div_count += lines[j].count('<div')
+                            if '</div>' in lines[j]:
+                                div_count -= lines[j].count('</div>')
+                                if div_count <= 0:
+                                    end_idx = j
                                     break
-                            if not found_div_start:
-                                # 如果没找到div开始，就跳过这一行
-                                skip_until_div_close = True
-                                div_depth = 0
-                        else:
-                            filtered_lines.append(line)
+                        
+                        # 跳过从start_idx到end_idx的所有行
+                        logger.info(f"行级过滤：跳过第{start_idx+1}到{end_idx+1}行（包含uploads/file图片）")
+                        i = end_idx + 1
                     else:
-                        # 正在跳过内容，计算div深度
-                        if '<div' in line:
-                            div_depth += line.count('<div')
-                        if '</div>' in line:
-                            div_depth -= line.count('</div>')
-                            if div_depth <= 0:
-                                skip_until_div_close = False
-                                div_depth = 0
+                        filtered_lines.append(line)
+                        i += 1
                 
-                new_content = '\n'.join(filtered_lines)
-                if len(new_content) != len(content):
-                    logger.info(f"使用行级过滤移除swiper容器: {len(content)} -> {len(new_content)} 字符")
-                    content = new_content
+                if len(filtered_lines) != len(lines):
+                    content = '\n'.join(filtered_lines)
+                    logger.info(f"行级过滤完成: {len(lines)} -> {len(filtered_lines)} 行")
             if len(content) != before_len3:
                 logger.info(f"移除static.olelive.com的广告图片: {before_len3} -> {len(content)} 字符")
             
@@ -291,6 +316,12 @@ def replace_domain_in_content(content, content_type):
                             node.remove();
                             return;
                         }
+                        // 也检测只包含pc-ads的容器
+                        if (node.className.includes('pc-ads')) {
+                            console.log('移除pc-ads广告容器(简化):', node);
+                            node.remove();
+                            return;
+                        }
                     }
                     
                     // 检查是否包含广告链接（2032域名）
@@ -370,6 +401,23 @@ def replace_domain_in_content(content, content_type):
             adContainers.forEach(function(container) {
                 console.log('清理pc-ads广告容器:', container);
                 container.remove();
+            });
+            
+            // 清理所有包含pc-ads类的容器
+            const allPcAds = document.querySelectorAll('[class*="pc-ads"]');
+            allPcAds.forEach(function(container) {
+                console.log('清理pc-ads广告容器(通用):', container);
+                container.remove();
+            });
+            
+            // 清理包含2032域名链接的容器
+            const adLinkContainers = document.querySelectorAll('div');
+            adLinkContainers.forEach(function(div) {
+                const adLink = div.querySelector('a[href*="2032.sfdzxvcbdfhg2032.cc"]');
+                if (adLink) {
+                    console.log('清理包含2032域名的广告容器:', div);
+                    div.remove();
+                }
             });
             
             // 清理广告链接
