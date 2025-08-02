@@ -1,15 +1,24 @@
 #!/bin/bash
 
 # 网站代理服务器一键启动脚本
-# 作者：Claude Code
+# 作者：matrix
 # 功能：启动带广告拦截功能的网站代理服务器
+
+# 启用别名扩展（重要！）
+shopt -s expand_aliases
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PID_FILE="$SCRIPT_DIR/proxy.pid"
 LOG_FILE="$SCRIPT_DIR/proxy.log"
 PORT=8888
+
+# 加载bashrc以获取别名定义
 source ~/.bashrc
+
+# 启用系统代理（现在可以使用别名了）
+echo "🔧 正在配置系统代理..."
 proxy-on
+
 # 颜色输出
 RED='\033[0;31m'
 GREEN='\033[0;32m'

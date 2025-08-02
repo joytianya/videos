@@ -24,8 +24,32 @@ TARGET_BASE_URL = f'{TARGET_SCHEME}://{TARGET_DOMAIN}'
 
 # 创建session以复用连接
 session = requests.Session()
+
+# 检查是否有系统代理设置
+import os
+if os.environ.get('HTTP_PROXY') or os.environ.get('HTTPS_PROXY'):
+    proxies = {
+        'http': os.environ.get('HTTP_PROXY'),
+        'https': os.environ.get('HTTPS_PROXY')
+    }
+    session.proxies.update(proxies)
+    logger.info(f"使用系统代理: {proxies}")
+
 session.headers.update({
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Cache-Control': 'no-cache',
+    'Pragma': 'no-cache',
+    'Sec-Ch-Ua': '"Not_A Brand";v="8", "Chromium";v="120", "Google Chrome";v="120"',
+    'Sec-Ch-Ua-Mobile': '?0',
+    'Sec-Ch-Ua-Platform': '"Windows"',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'same-origin',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1'
 })
 
 # 需要替换的内容类型
@@ -41,44 +65,6 @@ def get_proxy_domain():
     """获取代理域名"""
     return request.host
 
-def is_advertisement(url, content_type, content_length):
-    """判断是否为广告内容"""
-    url_lower = url.lower()
-    
-    # 只拦截明确的广告域名，不拦截主站资源
-    explicit_ad_domains = [
-        'googleads',
-        'googlesyndication', 
-        'doubleclick',
-        'adsystem',
-        'amazon-adsystem'
-    ]
-    
-    for domain in explicit_ad_domains:
-        if domain in url_lower:
-            return True
-    
-    # 检查明确的广告关键词（避免误拦截loading等正常文件）
-    explicit_ad_keywords = [
-        'advertisement', 'banner', 'popup', 'promo',
-        'sponsor', 'affiliate', 'tracking', 'analytics', 'adnxs'
-    ]
-    
-    for keyword in explicit_ad_keywords:
-        if keyword in url_lower:
-            return True
-    
-    # 检查文件名中明确的广告模式
-    ad_patterns = [
-        'banner', 'ad_banner', '_ad_', 'popup', 'promo'
-    ]
-    
-    for pattern in ad_patterns:
-        if pattern in url_lower:
-            return True
-    
-    return False
-
 def replace_domain_in_content(content, content_type):
     """替换内容中的域名并移除广告"""
     if not any(ct in content_type.lower() for ct in TEXT_CONTENT_TYPES):
@@ -91,438 +77,135 @@ def replace_domain_in_content(content, content_type):
     # 移除广告相关的HTML内容
     if 'text/html' in content_type.lower():
         try:
-            logger.info(f"开始HTML内容过滤，原始长度: {len(content)} 字符")
+            # 快速检查是否需要过滤
+            needs_filtering = any(keyword in content for keyword in [
+                'pc-ads', 'static.olelive.com/uploads/file/', '2032.sfdzxvcbdfhg2032.cc',
+                'tjh121e721.xn--9kqv5am2jbz1a.com'
+            ])
             
-            # 检查是否包含广告内容
-            pc_ads_count = len(re.findall(r'pc-ads', content, re.IGNORECASE))
-            gif_count = len(re.findall(r'\.gif', content, re.IGNORECASE))
-            static_olelive_count = len(re.findall(r'static\.olelive\.com', content, re.IGNORECASE))
-            
-            logger.info(f"发现广告内容 - pc-ads: {pc_ads_count}, gif: {gif_count}, static.olelive: {static_olelive_count}")
-            
-            original_content = content
-            
-            # 精准拦截pc-ads广告容器（完整移除整个结构）
-            before_len = len(content)
-            
-            # 移除完整的pc-ads广告div结构，包括所有嵌套内容
-            # 模式1：标准的pc-ads容器
-            ad_container_pattern1 = r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?</div>\s*</a>\s*</div>'
-            content = re.sub(ad_container_pattern1, '', content, flags=re.IGNORECASE | re.DOTALL)
-            
-            # 模式2：更精确的匹配，包含2032域名
-            ad_container_pattern2 = r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?<a[^>]*href="[^"]*2032\.sfdzxvcbdfhg2032\.cc[^"]*"[^>]*>.*?</a>\s*</div>'
-            content = re.sub(ad_container_pattern2, '', content, flags=re.IGNORECASE | re.DOTALL)
-            
-            # 模式3：匹配包含uploads/file图片的pc-ads容器
-            ad_container_pattern3 = r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>'
-            content = re.sub(ad_container_pattern3, '', content, flags=re.IGNORECASE | re.DOTALL)
-            
-            # 模式4：简化匹配，只要包含pc-ads类的div
-            ad_container_pattern4 = r'<div[^>]*class="[^"]*pc-ads[^"]*"[^>]*>.*?</div>'
-            content = re.sub(ad_container_pattern4, '', content, flags=re.IGNORECASE | re.DOTALL)
-            
-            if len(content) != before_len:
-                logger.info(f"移除pc-ads广告容器: {before_len} -> {len(content)} 字符")
-            
-            # 备用方案：如果上面的模式没匹配到，尝试更简单的模式
-            if len(content) == before_len:
-                # 移除包含2032.sfdzxvcbdfhg2032.cc域名的完整链接
-                before_len2 = len(content)
-                content = re.sub(
-                    r'<div[^>]*pc-ads[^>]*>.*?<a[^>]*2032\.sfdzxvcbdfhg2032\.cc[^>]*>.*?</a>.*?</div>',
-                    '',
-                    content,
-                    flags=re.IGNORECASE | re.DOTALL
-                )
-                if len(content) != before_len2:
-                    logger.info(f"移除广告链接容器: {before_len2} -> {len(content)} 字符")
-            
-            # 移除来自static.olelive.com的GIF文件，包括uploads/file目录下的所有图片
-            before_len3 = len(content)
-            # 移除static.olelive.com的GIF文件
-            content = re.sub(
-                r'<img[^>]*src="[^"]*static\.olelive\.com[^"]*\.gif[^"]*"[^>]*/?>\s*',
-                '',
-                content,
-                flags=re.IGNORECASE
-            )
-            # 移除static.olelive.com/uploads/file/目录下的所有图片
-            content = re.sub(
-                r'<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*/?>\s*',
-                '',
-                content,
-                flags=re.IGNORECASE
-            )
-            # 备用清理规则：更宽松的匹配
-            content = re.sub(
-                r'<img[^>]*src="[^"]*static\.olelive\.com[^"]*uploads[^"]*file[^"]*"[^>]*>\s*',
-                '',
-                content,
-                flags=re.IGNORECASE
-            )
-            
-            # 清理包含uploads/file图片的swiper-slide容器（处理嵌套div）
-            before_swiper = len(content)
-            
-            # 方法1：简化的swiper-slide清理
-            content = re.sub(
-                r'<div[^>]*class="[^"]*swiper-slide[^"]*"[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>',
-                '',
-                content,
-                flags=re.IGNORECASE | re.DOTALL
-            )
-            
-            # 方法2：更宽松的匹配，任何包含swiper-slide和uploads/file的div
-            content = re.sub(
-                r'<div[^>]*swiper-slide[^>]*>.*?static\.olelive\.com\/uploads\/file\/.*?</div>',
-                '',
-                content,
-                flags=re.IGNORECASE | re.DOTALL
-            )
-            
-            # 方法3：最通用的匹配，任何包含uploads/file的div（小心使用）
-            content = re.sub(
-                r'<div[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>',
-                '',
-                content,
-                flags=re.IGNORECASE | re.DOTALL
-            )
-            
-            # 额外的强力清理：使用更简单的字符串替换
-            if 'static.olelive.com/uploads/file/' in content:
-                # 直接查找并移除包含uploads/file的完整行或块
-                lines = content.split('\n')
-                filtered_lines = []
-                i = 0
-                while i < len(lines):
-                    line = lines[i]
-                    if 'static.olelive.com/uploads/file/' in line:
-                        # 找到包含uploads/file的行，向前查找div开始
-                        start_idx = i
-                        # 向前查找div开始标签
-                        for j in range(i-1, -1, -1):
-                            if '<div' in lines[j] and ('swiper-slide' in lines[j] or 'csp' in lines[j] or 'class=' in lines[j]):
-                                start_idx = j
-                                break
-                        
-                        # 向后查找div结束标签
-                        end_idx = i
-                        div_count = 0
-                        for j in range(start_idx, len(lines)):
-                            if '<div' in lines[j]:
-                                div_count += lines[j].count('<div')
-                            if '</div>' in lines[j]:
-                                div_count -= lines[j].count('</div>')
-                                if div_count <= 0:
-                                    end_idx = j
-                                    break
-                        
-                        # 跳过从start_idx到end_idx的所有行
-                        logger.info(f"行级过滤：跳过第{start_idx+1}到{end_idx+1}行（包含uploads/file图片）")
-                        i = end_idx + 1
-                    else:
-                        filtered_lines.append(line)
-                        i += 1
+            if needs_filtering:
+                logger.info(f"开始HTML内容过滤，原始长度: {len(content)} 字符")
                 
-                if len(filtered_lines) != len(lines):
-                    content = '\n'.join(filtered_lines)
-                    logger.info(f"行级过滤完成: {len(lines)} -> {len(filtered_lines)} 行")
-            if len(content) != before_len3:
-                logger.info(f"移除static.olelive.com的广告图片: {before_len3} -> {len(content)} 字符")
+                # 合并所有广告移除操作为一次正则替换
+                # 使用编译后的正则表达式提高性能
+                ad_patterns = [
+                    # 最完整的pc-ads容器（优先匹配）
+                    r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?<a[^>]*href="[^"]*tjh121e721\.xn--9kqv5am2jbz1a\.com[^"]*"[^>]*>.*?</a>\s*</div>',
+                    r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?<a[^>]*href="[^"]*2032\.sfdzxvcbdfhg2032\.cc[^"]*"[^>]*>.*?</a>\s*</div>',
+                    # 通用pc-ads容器
+                    r'<div[^>]*class="[^"]*pc-content[^"]*pc-ads[^"]*"[^>]*>.*?</div>',
+                    r'<div[^>]*class="[^"]*pc-ads[^"]*"[^>]*>.*?</div>',
+                    # swiper-slide广告容器
+                    r'<div[^>]*class="[^"]*swiper-slide[^"]*"[^>]*>.*?<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*>.*?</div>',
+                    # 单独的广告链接
+                    r'<a[^>]*href="[^"]*tjh121e721\.xn--9kqv5am2jbz1a\.com[^"]*"[^>]*>.*?</a>',
+                    r'<a[^>]*href="[^"]*2032\.sfdzxvcbdfhg2032\.cc[^"]*"[^>]*>.*?</a>',
+                    # uploads/file图片（最后处理）
+                    r'<img[^>]*src="[^"]*static\.olelive\.com\/uploads\/file\/[^"]*"[^>]*/?>\s*',
+                ]
+                
+                # 合并所有模式为一个大的正则表达式
+                combined_pattern = '|'.join(f'({pattern})' for pattern in ad_patterns)
+                compiled_regex = re.compile(combined_pattern, re.IGNORECASE | re.DOTALL)
+                
+                # 一次性替换所有匹配
+                original_len = len(content)
+                content = compiled_regex.sub('', content)
+                
+                if len(content) != original_len:
+                    logger.info(f"HTML过滤完成: {original_len} -> {len(content)} 字符 (减少 {original_len - len(content)})")
             
-            # 5. 注入广告拦截JavaScript代码
+            # 注入精简版的广告拦截JavaScript代码
             ad_blocker_js = '''
 <script type="text/javascript">
 (function() {
-    // 拦截动态广告加载
+    // 精简版广告拦截代码
+    const adPaths = ['static.olelive.com/uploads/file/', '2032.sfdzxvcbdfhg2032.cc', 'tjh121e721.xn--9kqv5am2jbz1a.com'];
+    
+    // 拦截网络请求
     const originalFetch = window.fetch;
-    const originalXMLHttpRequest = window.XMLHttpRequest.prototype.open;
-    
-    // 广告域名黑名单
-    const adDomains = [
-        'static.olelive.com',
-        '2032.sfdzxvcbdfhg2032.cc',
-        'tjh121e721'
-    ];
-    
-    // 特定路径广告拦截
-    const adPaths = [
-        'static.olelive.com/uploads/file/'
-    ];
-    
-    // 拦截fetch请求（只拦截广告域名和GIF动画）
     window.fetch = function(...args) {
         const url = args[0];
-        if (typeof url === 'string') {
-            for (const domain of adDomains) {
-                if (url.includes(domain)) {
-                    console.log('拦截广告域名请求:', url);
-                    return Promise.resolve(new Response('', {status: 204}));
-                }
-            }
-            // 拦截特定路径的广告
-            for (const path of adPaths) {
-                if (url.includes(path)) {
-                    console.log('拦截广告路径请求:', url);
-                    return Promise.resolve(new Response('', {status: 204}));
-                }
-            }
-            // 只拦截GIF动画（通常是广告），保留JPG/PNG等图片
-            if (url.includes('.gif')) {
-                console.log('拦截GIF广告动画:', url);
-                return Promise.resolve(new Response('', {status: 204}));
-            }
+        if (typeof url === 'string' && adPaths.some(path => url.includes(path))) {
+            return Promise.resolve(new Response('', {status: 204}));
         }
         return originalFetch.apply(this, args);
     };
     
-    // 拦截XMLHttpRequest（只拦截广告域名和GIF动画）
-    window.XMLHttpRequest.prototype.open = function(method, url, ...args) {
-        if (typeof url === 'string') {
-            for (const domain of adDomains) {
-                if (url.includes(domain)) {
-                    console.log('拦截XHR广告域名请求:', url);
-                    url = 'data:text/plain;base64,';
-                    break;
+    // DOM清理函数
+    function cleanAds() {
+        // 白名单：不要删除这些重要元素
+        const protectedSelectors = [
+            'input', 'button', 'form', 'nav', 'header', 'footer', 
+            '[class*="search"]', '[id*="search"]', '[class*="menu"]',
+            '[class*="nav"]', '[class*="header"]', '[class*="footer"]'
+        ];
+        
+        // 检查元素是否应该被保护
+        function isProtected(element) {
+            return protectedSelectors.some(selector => {
+                try {
+                    return element.matches(selector) || element.closest(selector);
+                } catch (e) {
+                    return false;
                 }
-            }
-            // 拦截特定路径的广告
-            for (const path of adPaths) {
-                if (url.includes(path)) {
-                    console.log('拦截XHR广告路径请求:', url);
-                    url = 'data:text/plain;base64,';
-                    break;
-                }
-            }
-            // 只拦截GIF动画
-            if (url.includes('.gif')) {
-                console.log('拦截XHR GIF广告:', url);
-                url = 'data:text/plain;base64,';
-            }
+            });
         }
-        return originalXMLHttpRequest.call(this, method, url, ...args);
-    };
+        
+        // 清理pc-ads（只清理明确的广告容器）
+        document.querySelectorAll('[class*="pc-ads"]').forEach(el => {
+            if (!isProtected(el) && el.className.includes('pc-ads')) {
+                el.remove();
+            }
+        });
+        
+        // 清理包含uploads/file的图片（只删除图片和swiper容器）
+        document.querySelectorAll('img[src*="static.olelive.com/uploads/file/"]').forEach(img => {
+            if (!isProtected(img)) {
+                const swiperParent = img.closest('.swiper-slide');
+                if (swiperParent && !isProtected(swiperParent)) {
+                    swiperParent.remove();
+                } else {
+                    img.remove();
+                }
+            }
+        });
+        
+        // 清理2032链接和新的广告域名链接（只删除链接本身）
+        document.querySelectorAll('a[href*="2032.sfdzxvcbdfhg2032.cc"], a[href*="tjh121e721.xn--9kqv5am2jbz1a.com"]').forEach(link => {
+            if (!isProtected(link)) {
+                link.remove();
+            }
+        });
+    }
     
-    // 监听DOM变化，移除动态插入的广告
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            mutation.addedNodes.forEach(function(node) {
-                if (node.nodeType === 1) { // Element node
-                    // 检查是否是swiper-slide容器
-                    if (node.className && typeof node.className === 'string') {
-                        if (node.className.includes('swiper-slide')) {
-                            // 检查是否包含uploads/file图片
-                            const hasUploadsFile = node.innerHTML && node.innerHTML.includes('static.olelive.com/uploads/file/');
-                            if (hasUploadsFile) {
-                                console.log('移除包含uploads/file的swiper-slide容器:', node);
-                                node.remove();
-                                return;
-                            }
-                            // 也检查子元素
-                            const uploadsImg = node.querySelector && node.querySelector('img[src*="static.olelive.com/uploads/file/"]');
-                            if (uploadsImg) {
-                                console.log('移除包含uploads/file图片的swiper-slide:', node);
-                                node.remove();
-                                return;
-                            }
-                        }
-                        
-                        // 专门检测pc-ads广告容器
-                        if (node.className.includes('pc-content') && node.className.includes('pc-ads')) {
-                            console.log('移除pc-ads广告容器:', node);
-                            node.remove();
-                            return;
-                        }
-                        // 也检测只包含pc-ads的容器
-                        if (node.className.includes('pc-ads')) {
-                            console.log('移除pc-ads广告容器(简化):', node);
-                            node.remove();
-                            return;
-                        }
+    // 监听DOM变化
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                    // 检查新增节点
+                    if (node.matches && (
+                        node.matches('[class*="pc-ads"]') ||
+                        node.matches('.swiper-slide') && node.querySelector('img[src*="static.olelive.com/uploads/file/"]')
+                    )) {
+                        node.remove();
                     }
-                    
-                    // 检查是否包含广告链接（2032域名）
-                    if (node.tagName === 'A' && node.href) {
-                        if (node.href.includes('2032.sfdzxvcbdfhg2032.cc') || 
-                            node.href.includes('tjh121e721')) {
-                            console.log('移除广告链接:', node.href);
-                            node.remove();
-                            return;
-                        }
-                    }
-                    
-                    // 移除广告图片
-                    if (node.tagName === 'IMG' && node.src) {
-                        // 移除GIF广告图片
-                        if (node.src.includes('.gif') && 
-                            (node.src.includes('static.olelive.com') || 
-                             node.src.includes('2032.sfdzxvcbdfhg2032.cc'))) {
-                            console.log('移除GIF广告图片:', node.src);
-                            node.remove();
-                            return;
-                        }
-                        // 移除特定路径的广告图片
-                        for (const path of adPaths) {
-                            if (node.src.includes(path)) {
-                                console.log('移除广告路径图片:', node.src);
-                                node.remove();
-                                return;
-                            }
-                        }
-                        // 额外检查：直接匹配static.olelive.com/uploads/file/路径
-                        if (node.src.includes('static.olelive.com/uploads/file/')) {
-                            console.log('移除uploads/file目录广告图片:', node.src);
-                            node.remove();
-                            return;
-                        }
-                    }
-                    
-                    // 检查子元素中的广告
-                    const adContainers = node.querySelectorAll('.pc-content.pc-ads');
-                    adContainers.forEach(function(container) {
-                        console.log('移除子广告容器:', container);
-                        container.remove();
-                    });
-                    
-                    const adLinks = node.querySelectorAll('a[href*="2032.sfdzxvcbdfhg2032.cc"], a[href*="tjh121e721"]');
-                    adLinks.forEach(function(link) {
-                        console.log('移除子广告链接:', link.href);
-                        link.remove();
-                    });
-                    
-                    // 检查包含uploads/file图片的swiper-slide容器
-                    const swiperSlides = node.querySelectorAll('.swiper-slide');
-                    swiperSlides.forEach(function(slide) {
-                        const uploadsImg = slide.querySelector('img[src*="static.olelive.com/uploads/file/"]');
-                        if (uploadsImg) {
-                            console.log('移除包含uploads/file图片的swiper-slide:', slide);
-                            slide.remove();
-                        }
-                    });
                 }
             });
         });
     });
     
-    // 开始监听
-    observer.observe(document.body || document.documentElement, {
-        childList: true,
-        subtree: true
-    });
+    // 启动监听
+    observer.observe(document.body || document.documentElement, {childList: true, subtree: true});
     
-    // 定期清理函数
-    function cleanAds() {
-            // 清理pc-ads广告容器
-            const adContainers = document.querySelectorAll('.pc-content.pc-ads');
-            adContainers.forEach(function(container) {
-                console.log('清理pc-ads广告容器:', container);
-                container.remove();
-            });
-            
-            // 清理所有包含pc-ads类的容器
-            const allPcAds = document.querySelectorAll('[class*="pc-ads"]');
-            allPcAds.forEach(function(container) {
-                console.log('清理pc-ads广告容器(通用):', container);
-                container.remove();
-            });
-            
-            // 清理包含2032域名链接的容器
-            const adLinkContainers = document.querySelectorAll('div');
-            adLinkContainers.forEach(function(div) {
-                const adLink = div.querySelector('a[href*="2032.sfdzxvcbdfhg2032.cc"]');
-                if (adLink) {
-                    console.log('清理包含2032域名的广告容器:', div);
-                    div.remove();
-                }
-            });
-            
-            // 清理广告链接
-            const adLinks = document.querySelectorAll('a[href*="2032.sfdzxvcbdfhg2032.cc"], a[href*="tjh121e721"]');
-            adLinks.forEach(function(link) {
-                console.log('清理广告链接:', link.href);
-                link.remove();
-            });
-            
-            // 清理广告图片
-            const gifAds = document.querySelectorAll('img[src*=".gif"][src*="static.olelive.com"], img[src*=".gif"][src*="2032.sfdzxvcbdfhg2032.cc"]');
-            gifAds.forEach(function(img) {
-                console.log('清理GIF广告图片:', img.src);
-                img.remove();
-            });
-            
-            // 清理特定路径的广告图片
-            adPaths.forEach(function(path) {
-                const pathAds = document.querySelectorAll('img[src*="' + path + '"]');
-                pathAds.forEach(function(img) {
-                    console.log('清理广告路径图片:', img.src);
-                    img.remove();
-                });
-            });
-            
-            // 额外清理：直接匹配static.olelive.com/uploads/file/路径下的所有图片
-            const uploadsFileAds = document.querySelectorAll('img[src*="static.olelive.com/uploads/file/"]');
-            uploadsFileAds.forEach(function(img) {
-                console.log('清理uploads/file目录广告图片:', img.src);
-                img.remove();
-            });
-            
-            // 清理包含uploads/file图片的swiper-slide容器
-            const swiperSlides = document.querySelectorAll('.swiper-slide');
-            swiperSlides.forEach(function(slide) {
-                const uploadsImg = slide.querySelector('img[src*="static.olelive.com/uploads/file/"]');
-                if (uploadsImg) {
-                    console.log('清理包含uploads/file图片的swiper-slide容器:', slide);
-                    slide.remove();
-                }
-            });
-            
-            // 清理任何包含uploads/file图片的父容器
-            const allUploadsImgs = document.querySelectorAll('img[src*="static.olelive.com/uploads/file/"]');
-            allUploadsImgs.forEach(function(img) {
-                // 向上查找并移除包含广告图片的容器
-                let parent = img.parentElement;
-                while (parent && parent !== document.body) {
-                    if (parent.classList.contains('swiper-slide') || 
-                        parent.classList.contains('csp') ||
-                        parent.tagName === 'DIV') {
-                        console.log('清理包含uploads/file图片的父容器:', parent);
-                        parent.remove();
-                        break;
-                    }
-                    parent = parent.parentElement;
-                }
-            });
-    }
-    
-    // 页面加载完成后清理
-    document.addEventListener('DOMContentLoaded', function() {
-        // 立即清理一次
-        cleanAds();
-        
-        // 1秒后再清理一次
-        setTimeout(cleanAds, 1000);
-        
-        // 2秒后再清理一次
-        setTimeout(cleanAds, 2000);
-        
-        // 然后每3秒清理一次，持续30秒
-        let cleanCount = 0;
-        const cleanInterval = setInterval(function() {
-            cleanAds();
-            cleanCount++;
-            console.log('定期清理广告，第' + cleanCount + '次');
-            if (cleanCount >= 10) {
-                clearInterval(cleanInterval);
-                console.log('停止定期清理');
-            }
-        }, 3000);
-    });
-    
-    // 如果DOMContentLoaded已经触发，立即开始清理
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-        cleanAds();
-        setTimeout(cleanAds, 1000);
+    // 定时清理（优化版 - 减少频率）
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(cleanAds, 1000); // 页面加载1秒后清理一次
+        });
+    } else {
+        setTimeout(cleanAds, 500); // 如果页面已加载，0.5秒后清理一次
     }
 })();
 </script>
@@ -531,13 +214,6 @@ def replace_domain_in_content(content, content_type):
             # 在</head>标签前插入广告拦截JS
             if '</head>' in content:
                 content = content.replace('</head>', ad_blocker_js + '</head>')
-                logger.info("注入广告拦截JavaScript代码")
-            
-            # 总结过滤结果
-            if len(content) != len(original_content):
-                logger.info(f"HTML过滤完成: {len(original_content)} -> {len(content)} 字符 (减少 {len(original_content) - len(content)})")
-            else:
-                logger.info("HTML内容未发生变化，但已注入广告拦截代码")
                 
         except Exception as e:
             logger.warning(f"HTML广告过滤失败: {e}")
@@ -545,39 +221,24 @@ def replace_domain_in_content(content, content_type):
     # 过滤JavaScript和CSS中的广告内容（精简版）
     elif 'javascript' in content_type.lower() or 'text/css' in content_type.lower():
         try:
-            # 只移除明确的广告域名请求，不过度过滤
-            original_length = len(content)
-            
             # 只移除明确的广告域名
-            ad_patterns = [
-                r'["\']https?://.*2032\.sfdzxvcbdfhg2032\.cc[^"\']*\.gif[^"\']*["\']',
-                r'["\']https?://.*tjh121e721[^"\']*["\']',
-            ]
-            
-            for pattern in ad_patterns:
-                content = re.sub(pattern, '""', content, flags=re.IGNORECASE)
-            
-            if len(content) != original_length:
-                logger.info(f"JS/CSS精简过滤: {original_length} -> {len(content)} 字符")
+            if any(domain in content for domain in ['2032.sfdzxvcbdfhg2032.cc', 'tjh121e721']):
+                content = re.sub(
+                    r'["\']https?://[^"\']*(?:2032\.sfdzxvcbdfhg2032\.cc|tjh121e721)[^"\']*["\']',
+                    '""',
+                    content,
+                    flags=re.IGNORECASE
+                )
             
         except Exception as e:
             logger.warning(f"JS/CSS过滤失败: {e}")
     
-    # 替换绝对URL
-    content = re.sub(
-        rf'{TARGET_SCHEME}://{re.escape(TARGET_DOMAIN)}',
-        proxy_base_url,
-        content,
-        flags=re.IGNORECASE
-    )
-    
-    # 替换协议相对URL
-    content = re.sub(
-        rf'//{re.escape(TARGET_DOMAIN)}',
-        f'//{proxy_domain}',
-        content,
-        flags=re.IGNORECASE
-    )
+    # 替换域名（使用更高效的方法）
+    if TARGET_DOMAIN in content:
+        # 替换绝对URL
+        content = content.replace(f'{TARGET_SCHEME}://{TARGET_DOMAIN}', proxy_base_url)
+        # 替换协议相对URL
+        content = content.replace(f'//{TARGET_DOMAIN}', f'//{proxy_domain}')
     
     return content
 
@@ -585,9 +246,12 @@ def modify_request_headers(headers):
     """修改请求头"""
     modified_headers = {}
     
+    # 需要跳过的头部（减少跳过的数量）
+    skip_headers = ['host', 'content-length', 'connection']
+    
     for key, value in headers.items():
         # 跳过某些头部
-        if key.lower() in ['host', 'content-length', 'connection', 'accept-encoding']:
+        if key.lower() in skip_headers:
             continue
             
         # 修改Referer头
@@ -596,11 +260,19 @@ def modify_request_headers(headers):
             if proxy_domain in value:
                 value = value.replace(f'://{proxy_domain}', f'://{TARGET_DOMAIN}')
         
+        # 保留Cookie（重要：搜索功能可能需要）
         modified_headers[key] = value
     
     # 设置正确的Host头
     modified_headers['Host'] = TARGET_DOMAIN
-    modified_headers['Accept-Encoding'] = 'identity'  # 禁用压缩以便处理内容
+    
+    # 如果没有Accept-Encoding，添加一个
+    if 'Accept-Encoding' not in modified_headers:
+        modified_headers['Accept-Encoding'] = 'gzip, deflate, br'
+    
+    # 确保有User-Agent
+    if 'User-Agent' not in modified_headers:
+        modified_headers['User-Agent'] = session.headers['User-Agent']
     
     return modified_headers
 
@@ -661,49 +333,27 @@ def proxy(path):
         
         # 检查是否为广告内容或GIF图片
         content_type = response.headers.get('content-type', '')
-        content_length = response.headers.get('content-length')
         
-        # 只拦截GIF图片（通常是广告动画），保留JPG/PNG等静态图片
-        if 'image/gif' in content_type.lower() or target_url.lower().endswith('.gif'):
-            logger.info(f"拦截GIF广告动画: {target_url}")
-            # 返回1x1像素透明GIF
+        # 快速路径：只对特定URL进行拦截
+        url_lower = target_url.lower()
+        
+        # 拦截static.olelive.com/uploads/file/目录下的所有内容
+        if 'static.olelive.com/uploads/file/' in url_lower:
+            logger.info(f"拦截uploads/file目录内容: {target_url}")
+            return Response('', status=204)
+        
+        # 拦截2032域名和新的广告域名
+        if ('2032.sfdzxvcbdfhg2032.cc' in url_lower or 
+            'tjh121e721' in url_lower or 
+            'tjh121e721.xn--9kqv5am2jbz1a.com' in url_lower):
+            logger.info(f"拦截广告域名: {target_url}")
+            return Response('', status=204)
+        
+        # 只对GIF图片进行额外检查
+        if url_lower.endswith('.gif') and 'static.olelive.com' in url_lower:
+            logger.info(f"拦截GIF广告: {target_url}")
             transparent_gif = b'GIF89a\x01\x00\x01\x00\x80\x00\x00\xff\xff\xff\x00\x00\x00!\xf9\x04\x01\x00\x00\x00\x00,\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02\x04\x01\x00;'
             return Response(transparent_gif, status=200, headers={'Content-Type': 'image/gif'})
-        
-        # 只拦截明确的广告域名（不拦截static.olelive.com，因为可能有正常资源）
-        explicit_ad_domains = [
-            '2032.sfdzxvcbdfhg2032.cc',
-            'tjh121e721'
-        ]
-        
-        for ad_domain in explicit_ad_domains:
-            if ad_domain in target_url.lower():
-                logger.info(f"拦截广告域名请求: {target_url}")
-                return Response('', status=204)
-        
-        # 拦截static.olelive.com的GIF文件和uploads/file目录下的所有图片
-        if 'static.olelive.com' in target_url.lower():
-            if target_url.lower().endswith('.gif'):
-                logger.info(f"拦截static.olelive.com的GIF文件: {target_url}")
-                transparent_gif = b'GIF89a\x01\x00\x01\x00\x80\x00\x00\xff\xff\xff\x00\x00\x00!\xf9\x04\x01\x00\x00\x00\x00,\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02\x04\x01\x00;'
-                return Response(transparent_gif, status=200, headers={'Content-Type': 'image/gif'})
-            elif '/uploads/file/' in target_url.lower():
-                logger.info(f"拦截static.olelive.com/uploads/file/目录下的图片: {target_url}")
-                # 根据文件扩展名返回相应的空图片
-                if target_url.lower().endswith(('.jpg', '.jpeg')):
-                    return Response(b'', status=204)
-                elif target_url.lower().endswith('.png'):
-                    return Response(b'', status=204)
-                elif target_url.lower().endswith('.gif'):
-                    transparent_gif = b'GIF89a\x01\x00\x01\x00\x80\x00\x00\xff\xff\xff\x00\x00\x00!\xf9\x04\x01\x00\x00\x00\x00,\x00\x00\x00\x00\x01\x00\x01\x00\x00\x02\x02\x04\x01\x00;'
-                    return Response(transparent_gif, status=200, headers={'Content-Type': 'image/gif'})
-                else:
-                    return Response('', status=204)
-        
-        # 检查其他广告内容
-        if is_advertisement(target_url, content_type, content_length):
-            logger.info(f"阻止广告请求: {target_url}")
-            return Response('', status=204)  # No Content
         
         # 处理响应内容
         content = response.content

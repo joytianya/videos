@@ -1,3 +1,4 @@
+INFO:__main__:使用系统代理: {'http': 'http://127.0.0.1:7891', 'https': 'http://127.0.0.1:7891'}
 启动代理服务器...
 目标网站: https://www.olevod.tv
  * Serving Flask app 'main'
@@ -7,12 +8,27 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://127.0.0.1:8888
  * Running on http://172.24.4.46:8888
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:__main__:代理请求: GET https://www.olevod.tv/tabs-6.html
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-Rank.1747204764000.js
 /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(
-INFO:__main__:开始HTML内容过滤，原始长度: 6709 字符
-INFO:__main__:发现广告内容 - pc-ads: 0, gif: 0, static.olelive: 0
-INFO:__main__:注入广告拦截JavaScript代码
-INFO:__main__:HTML过滤完成: 6709 -> 18556 字符 (减少 -11847)
-INFO:__main__:内容过滤: 6709 -> 18556 字符
-INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 11:19:19] "GET /tabs-6.html HTTP/1.1" 200 -
+INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:01:59] "GET /js/tv-pc-Rank.1747204764000.js HTTP/1.1" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/details-1-38111.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:内容过滤: 6812 -> 10027 字符
+INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:02:20] "GET /details-1-38111.html HTTP/1.1" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/details-1-49309.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:内容过滤: 7006 -> 10221 字符
+INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:02:24] "GET /details-1-49309.html HTTP/1.1" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/details-1-26682.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:内容过滤: 6847 -> 10062 字符
+INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:02:29] "GET /details-1-26682.html HTTP/1.1" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/details-1-33314.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:内容过滤: 6927 -> 10142 字符
+INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:02:32] "GET /details-1-33314.html HTTP/1.1" 200 -
