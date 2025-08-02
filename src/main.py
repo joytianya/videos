@@ -25,6 +25,54 @@ TARGET_BASE_URL = f'{TARGET_SCHEME}://{TARGET_DOMAIN}'
 # 创建session以复用连接
 session = requests.Session()
 
+# 配置连接池参数
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+# 配置重试策略
+retry_strategy = Retry(
+    total=3,
+    status_forcelist=[429, 500, 502, 503, 504],
+    allowed_methods=["HEAD", "GET", "OPTIONS"],  # 新版本使用allowed_methods
+    backoff_factor=1
+)
+
+# 配置SSL设置
+import ssl
+import urllib3
+
+# 禁用SSL警告
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# 创建自定义HTTPAdapter类来处理SSL
+class SSLAdapter(HTTPAdapter):
+    def init_poolmanager(self, *args, **kwargs):
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        ctx.set_ciphers('DEFAULT@SECLEVEL=1')  # 降低安全级别以兼容更多服务器
+        kwargs['ssl_context'] = ctx
+        return super().init_poolmanager(*args, **kwargs)
+
+# 配置HTTP适配器
+adapter = HTTPAdapter(
+    pool_connections=20,  # 增加连接池大小
+    pool_maxsize=20,      # 增加最大连接数
+    max_retries=retry_strategy,
+    pool_block=False
+)
+
+# 使用自定义SSL适配器
+ssl_adapter = SSLAdapter(
+    pool_connections=20,
+    pool_maxsize=20,
+    max_retries=retry_strategy,
+    pool_block=False
+)
+
+session.mount("http://", adapter)
+session.mount("https://", ssl_adapter)  # 对HTTPS使用SSL适配器
+
 # 检查是否有系统代理设置
 import os
 
@@ -35,6 +83,9 @@ if os.environ.get('HTTP_PROXY') or os.environ.get('HTTPS_PROXY'):
     }
     session.proxies.update(proxies)
     logger.info(f"使用系统代理: {proxies}")
+else:
+    # 如果没有系统代理，直接连接
+    logger.info("未检测到系统代理，使用直连模式")
 
 session.headers.update({
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -431,8 +482,9 @@ def proxy(path):
             headers=headers,
             data=data,
             allow_redirects=False,
-            timeout=10,  # 减少超时时间
-            verify=False  # 忽略SSL证书验证
+            timeout=15,  # 增加超时时间
+            verify=False,  # 忽略SSL证书验证
+            stream=False   # 不使用流式传输，避免连接池问题
         )
         
         # 检查是否为广告内容或GIF图片
