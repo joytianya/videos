@@ -27,6 +27,7 @@ session = requests.Session()
 
 # 检查是否有系统代理设置
 import os
+
 if os.environ.get('HTTP_PROXY') or os.environ.get('HTTPS_PROXY'):
     proxies = {
         'http': os.environ.get('HTTP_PROXY'),
@@ -254,17 +255,29 @@ def modify_request_headers(headers):
         if key.lower() in skip_headers:
             continue
             
-        # 修改Referer头
+        # 修改Referer头 - 改进反检测
         if key.lower() == 'referer':
             proxy_domain = get_proxy_domain()
             if proxy_domain in value:
+                # 直接设置为目标域名，避免暴露代理域名
                 value = value.replace(f'://{proxy_domain}', f'://{TARGET_DOMAIN}')
+            # 如果是外部referer，也要处理
+            elif 'aideal.uno' in value:
+                value = value.replace('aideal.uno', TARGET_DOMAIN)
+        
+        # 移除可能暴露代理的头部
+        if key.lower() in ['x-forwarded-for', 'x-real-ip', 'x-forwarded-proto', 'x-forwarded-host']:
+            continue
         
         # 保留Cookie（重要：搜索功能可能需要）
         modified_headers[key] = value
     
     # 设置正确的Host头
     modified_headers['Host'] = TARGET_DOMAIN
+    
+    # 添加更真实的浏览器头部
+    modified_headers['Origin'] = TARGET_BASE_URL
+    modified_headers['Referer'] = TARGET_BASE_URL
     
     # 如果没有Accept-Encoding，添加一个
     if 'Accept-Encoding' not in modified_headers:

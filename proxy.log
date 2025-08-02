@@ -8,27 +8,540 @@ INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a
  * Running on http://127.0.0.1:8888
  * Running on http://172.24.4.46:8888
 INFO:werkzeug:[33mPress CTRL+C to quit[0m
-INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-Rank.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv
 /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(
-INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:01:59] "GET /js/tv-pc-Rank.1747204764000.js HTTP/1.1" 200 -
-INFO:__main__:代理请求: GET https://www.olevod.tv/details-1-38111.html
+INFO:__main__:内容过滤: 6572 -> 9787 字符
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:41] "GET / HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/wasm_exec.js
 /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(
-INFO:__main__:内容过滤: 6812 -> 10027 字符
-INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:02:20] "GET /details-1-38111.html HTTP/1.1" 200 -
-INFO:__main__:代理请求: GET https://www.olevod.tv/details-1-49309.html
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-index.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@vue.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-vue-router.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-.store.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-axios.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-crypto-js.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-js-md5.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-has-symbols.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-has-proto.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-function-bind.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-has.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-get-intrinsic.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-call-bind.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-object-inspect.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-side-channel.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-qs.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-vue-demi.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-pinia.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-moment.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-lodash-es.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@vueuse.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@popperjs.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@ctrl.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-dayjs.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-async-validator.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-memoize-one.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-escape-html.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-normalize-wheel-es.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-main.1747204764000.css
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-element-plus.1747204764000.css
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-nprogress.1747204764000.css
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:41] "GET /js/wasm_exec.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-swiper.1747204764000.css
 /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(
-INFO:__main__:内容过滤: 7006 -> 10221 字符
-INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:02:24] "GET /details-1-49309.html HTTP/1.1" 200 -
-INFO:__main__:代理请求: GET https://www.olevod.tv/details-1-26682.html
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-plyr.1747204764000.css
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-vant.1747204764000.css
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@floating-ui.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-element-plus.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@element-plus.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-nprogress.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-vue-meta.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@soerenmartius.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-ssr-window.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-swiper.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-flv.js.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-plyr.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@vant.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-vant.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-main.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/jessibuca-pro.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/play.wasm
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /css/tv-pc-swiper.1747204764000.css HTTP/1.0" 200 -
 /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(
-INFO:__main__:内容过滤: 6847 -> 10062 字符
-INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:02:29] "GET /details-1-26682.html HTTP/1.1" 200 -
-INFO:__main__:代理请求: GET https://www.olevod.tv/details-1-33314.html
 /usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(
-INFO:__main__:内容过滤: 6927 -> 10142 字符
-INFO:werkzeug:124.126.137.110 - - [02/Aug/2025 13:02:32] "GET /details-1-33314.html HTTP/1.1" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-index.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-has-symbols.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-has.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-side-channel.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-js-md5.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-has-proto.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-function-bind.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-object-inspect.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-axios.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-call-bind.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-@vue.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-.store.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-crypto-js.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-dayjs.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-get-intrinsic.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-@ctrl.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-vue-router.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-memoize-one.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-qs.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-async-validator.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:42] "GET /js/tv-pc-normalize-wheel-es.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-pinia.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /css/tv-pc-nprogress.1747204764000.css HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-lodash-es.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-@vueuse.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-@popperjs.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-vue-demi.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-escape-html.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-nprogress.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-moment.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-@floating-ui.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-vue-meta.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-@soerenmartius.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-@vant.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /css/tv-pc-plyr.1747204764000.css HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-ssr-window.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /css/tv-pc-element-plus.1747204764000.css HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-vant.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-swiper.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-@element-plus.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /css/tv-pc-main.1747204764000.css HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /css/tv-pc-vant.1747204764000.css HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-flv.js.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-plyr.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-element-plus.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:43] "GET /js/tv-pc-main.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:44] "GET /js/jessibuca-pro.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:44] "GET /js/play.wasm HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-home.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-loading.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-vipi.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-sun_palys.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-Case.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-top3.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-CaseLine.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-fire.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-default_h_w.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-del.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-vip.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-icon_tv.1747204764000.js
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-top3.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-fire.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-CaseLine.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-default_h_w.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-Case.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-vipi.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-loading.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-sun_palys.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-del.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:45] "GET /js/tv-pc-home.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:46] "GET /js/tv-pc-icon_tv.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:46] "GET /js/tv-pc-vip.1747204764000.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-logos.1747204764000.png
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:47] "GET /css/tv-pc-logos.1747204764000.png HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-Navs.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:02:57] "GET /js/tv-pc-Navs.1747204764000.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/details-14-74672.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:内容过滤: 6658 -> 9873 字符
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:00] "GET /details-14-74672.html HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-details.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:01] "GET /js/tv-pc-details.1747204764000.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-Details.17472047640002.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-xx.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-play_icon_3.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-play_icon_1_h.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-play_icon_1.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-Ranking.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:01] "GET /js/tv-pc-play_icon_1_h.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:01] "GET /js/tv-pc-play_icon_3.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:01] "GET /js/tv-pc-xx.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:01] "GET /js/tv-pc-play_icon_1.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:01] "GET /js/tv-pc-Ranking.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:01] "GET /js/tv-pc-Details.17472047640002.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/player/vod/14-66267-100.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:内容过滤: 6653 -> 9868 字符
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:15] "GET /player/vod/14-66267-100.html HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-PlayerVod.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-EditorDanmaku.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-_plugin-vue_export-helper.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-EditorDanmaku.1747204764000.css
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-@wangeditor.1747204764000.css
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@wangeditor.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-process.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-EditorComment.1747204764000.css
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-link.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-play.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-EditorComment.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-update.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-qrcode.vue.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-vue3-danmaku.1747204764000.js
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:15] "GET /js/tv-pc-process.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:15] "GET /css/tv-pc-EditorComment.1747204764000.css HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:15] "GET /js/tv-pc-link.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:15] "GET /js/tv-pc-play.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:15] "GET /css/tv-pc-@wangeditor.1747204764000.css HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:15] "GET /js/tv-pc-_plugin-vue_export-helper.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:15] "GET /css/tv-pc-EditorDanmaku.1747204764000.css HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:16] "GET /js/tv-pc-EditorDanmaku.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:16] "GET /js/tv-pc-PlayerVod.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:16] "GET /js/tv-pc-@wangeditor.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:16] "GET /js/tv-pc-update.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:16] "GET /js/tv-pc-vue3-danmaku.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:16] "GET /js/tv-pc-qrcode.vue.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:16] "GET /js/tv-pc-EditorComment.1747204764000.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-control.1747204764000.css
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-control.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-multiple_vip.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:17] "GET /css/tv-pc-control.1747204764000.css HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:17] "GET /js/tv-pc-multiple_vip.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:17] "GET /js/tv-pc-control.1747204764000.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-is_vip_mask.1747204764000.png
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:17] "GET /css/tv-pc-is_vip_mask.1747204764000.png HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/favicon.ico
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:52] "GET /favicon.ico HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/player/vod/14-66267-1.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:内容过滤: 6651 -> 9866 字符
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:03:55] "GET /player/vod/14-66267-1.html HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-home.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-loading.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-sun_palys.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-Case.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-top3.1747204764000.js
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:04:27] "GET /js/tv-pc-home.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:04:27] "GET /js/tv-pc-top3.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:04:28] "GET /js/tv-pc-Case.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:04:28] "GET /js/tv-pc-loading.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:04:28] "GET /js/tv-pc-sun_palys.1747204764000.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-Tabs.17472047640002.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-lodash.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:04:43] "GET /js/tv-pc-Tabs.17472047640002.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:04:43] "GET /js/tv-pc-lodash.1747204764000.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/details-6-74501.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:内容过滤: 6865 -> 10080 字符
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:05] "GET /details-6-74501.html HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@element-plus.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-nprogress.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-vue-meta.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@soerenmartius.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-ssr-window.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-swiper.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-flv.js.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-plyr.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@vant.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-vant.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-main.1747204764000.js
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/play.wasm
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:05] "GET /js/tv-pc-vue-meta.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:05] "GET /js/tv-pc-ssr-window.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:05] "GET /js/tv-pc-nprogress.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:05] "GET /js/tv-pc-@soerenmartius.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:05] "GET /js/tv-pc-@element-plus.1747204764000.js HTTP/1.0" 200 -
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:06] "GET /js/tv-pc-@vant.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:06] "GET /js/tv-pc-vant.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:06] "GET /js/tv-pc-plyr.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:06] "GET /js/tv-pc-flv.js.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:06] "GET /js/tv-pc-swiper.1747204764000.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:07] "GET /js/tv-pc-main.1747204764000.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-Details.17472047640002.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:07] "GET /js/tv-pc-Details.17472047640002.js HTTP/1.0" 200 -
+WARNING:urllib3.connectionpool:Connection pool is full, discarding connection: www.olevod.tv. Connection pool size: 10
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:07] "GET /js/play.wasm HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/player/vod/6-74501-1.html
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:内容过滤: 6870 -> 10085 字符
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:10] "GET /player/vod/6-74501-1.html HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-PlayerVod.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-EditorDanmaku.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-_plugin-vue_export-helper.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:__main__:代理请求: GET https://www.olevod.tv/js/tv-pc-@wangeditor.1747204764000.js
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:11] "GET /js/tv-pc-EditorDanmaku.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:11] "GET /js/tv-pc-_plugin-vue_export-helper.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:11] "GET /js/tv-pc-PlayerVod.1747204764000.js HTTP/1.0" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:11] "GET /js/tv-pc-@wangeditor.1747204764000.js HTTP/1.0" 200 -
+INFO:__main__:代理请求: GET https://www.olevod.tv/css/tv-pc-is_vip_mask.1747204764000.png
+/usr/local/lib/python3.11/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host '127.0.0.1'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(
+INFO:werkzeug:127.0.0.1 - - [02/Aug/2025 14:05:12] "GET /css/tv-pc-is_vip_mask.1747204764000.png HTTP/1.0" 200 -

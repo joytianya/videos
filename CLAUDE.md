@@ -73,3 +73,8 @@ Key packages:
 - SSL certificate verification is disabled (`verify=False`)
 - Request timeout is set to 10 seconds
 - The proxy preserves HTTP methods (GET, POST, PUT, DELETE, etc.)
+
+
+切换到root
+可以用su root， 密码是"zxw123,,"
+然后执行nginx之类的命令
